@@ -1,0 +1,108 @@
+[viewBag]
+
+[builderList ourvalues]
+modelClass = "Cubecamp\Uxda\Models\OurValue"
+scope = "scopeActive"
+scopeValue = "{{ :scope }}"
+displayColumn = "*"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{#
+<script>
+	/**
+	 *  Our Values / Tabs
+	 */
+	(function() {
+		'use strict';
+
+		var count = $("#ourValuesTab li").length -1;
+
+		$(".tab-content").hammer().on("swipeleft", function () {
+
+			var active = $('#ourValuesTab li a.active');
+
+			if(active.length) {
+
+				var index = active.data("index");
+
+				if(index == count) {
+					index = 0;
+				}
+				else {
+					index++;
+				}
+
+				active.removeClass("active");
+				$("#ourValuesTab li:eq(" + index + ") a").tab("show").addClass("active");
+
+				$("#ourValuesTabIndicators li.active").removeClass("active");
+				$("#ourValuesTabIndicators li:eq(" + index + ")").addClass("active");
+
+			}
+
+		}).on('swiperight', function () {
+
+			var active = $('#ourValuesTab li a.active');
+
+			if(active.length) {
+
+				var index = active.data("index");
+
+				if(index == 0) {
+					index = count;
+				}
+				else {
+					index--;
+				}
+
+				active.removeClass("active");
+				$('#ourValuesTab li:eq(' + index + ') a').tab("show").addClass("active");
+
+				$("#ourValuesTabIndicators li.active").removeClass("active");
+				$("#ourValuesTabIndicators li:eq(" + index + ")").addClass("active");
+
+			}
+
+		});
+
+	}());
+
+</script>
+
+#}
+
+{% set records = ourvalues.records %}
+<div class="container team-values">
+    <div class="container d-none-desktop-mobile">
+        <h2>The values we live by</h2>
+        <p class="p2left">These seven values are the cornerstones of UXDA's philosophy and ideology. They define the way we perceive the world and every single process we encounter. Whatever we do, we have an exceptional ability to improve ourselves and the entire financial industry, empathize with each other, clients and the users, over-deliver on expectations, enjoy what they're doing and inspire others. Proving it is possible to solve any challenge if we are united as one and embrace our power to team up! </p>
+    </div>
+    <ul class="nav nav-tabs padding-screen-fix" id="ourValuesTab" role="tablist">
+		{% for item in records %}
+		<li class="nav-item team-values-nav" role="presentation">
+			<a href="#ourvalue{{item.id}}" data-index="{{loop.index0}}" data-toggle="tab" id="ourvalue{{item.id}}-tab" role="tab" aria-controls="ourvalue{{item.id}}" aria-selected="{{ loop.first ? 'true' : 'false' }}" {% if loop.first %} class="active" {% endif %}>{{item.name}}</a>
+		</li>
+		{% endfor %}
+    </ul>
+    <div class="tab-content" id="ourValuesTabContent">
+		{% for item in records %}
+		<div class="team-value-img tab-pane fadeIn animated slow {% if loop.first %} active {% endif %}"
+			 id="ourvalue{{item.id}}"
+			 aria-labelledby="ourvalue{{item.id}}-tab"
+			 role="tabpanel" {% if item.image %} style="background-image: url({{ item.image|media }})" {% endif %} >
+			<div class="team-value-text">
+				<h2>{{item.name}}</h2>
+				<p>{{item.description}}</p>
+			</div>
+		</div>
+		{% endfor %}
+    </div>
+	<ol id="ourValuesTabIndicators" class="carousel-indicators d-none-tablet-desktop">
+		{% for item in records %}
+		<li {% if loop.first %}class="active"{% endif %}></li>
+		{% endfor %}
+	</ol>
+</div>

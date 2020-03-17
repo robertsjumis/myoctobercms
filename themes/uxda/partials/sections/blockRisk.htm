@@ -1,0 +1,29 @@
+[viewBag]
+==
+<div class="container process-risk">
+    <h2>{{ section.title }}</h2>
+	<p class="p2left">{{ section.desc }}</p>
+
+	{% if section.image %}
+		<img class="risk-img" src="{{ section.image|media }}" alt="{{section.image_alt}}"/>
+	{% endif %}
+
+	{% for item in section.items %}
+
+	<div class="process-risk-block">
+		<h3>{{item.title}}</h3>
+		<div class="pt22">
+			{{item.desc|raw}}
+		</div>
+	</div>
+
+	{% endfor %}
+
+	{% if section.show_btn %}
+    <div class="d-flex justify-content-center">
+        <a href="{{'/contacts'|app}}" class="uxda-btn-href">
+            {{ 'risk.turn_these_risks_into_success'|_ }} <span class="btn-arrow-right-green"></span>
+        </a>
+    </div>
+	{% endif %}
+</div>

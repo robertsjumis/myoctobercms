@@ -1,0 +1,56 @@
+[viewBag]
+
+[childPages vacancies]
+
+[builderList teams]
+modelClass = "Cubecamp\Uxda\Models\Team"
+scope = "scopeActive"
+scopeValue = "{{ :scope }}"
+displayColumn = "*"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "sort_order"
+==
+<div class="container team-members">
+    <h2>{{ 'team.team'|_ }}</h2>
+    <div class="row">
+        {% set records = teams.records %}
+		{% for item in records %}
+		<div class="col-xl-3 col-6 team-member-card team-member-card-popup" data-team="{{item|uxda_team_json()}}" data-image="{{ item.image ? item.image|media|uxda_resize(128) : 'assets/img/avatar.png'|theme }}">
+			<div class="tm-card-avatar lazy" {% if item.image %} data-bg="url({{ item.image|media|uxda_resize(600) }})" {% endif %}>
+				<p class="pt16 member-description">{{item.description}}</p>
+				<h3 class="name">{{item.name}}</h3>
+				<div class="member-social">
+					{% if item.linkedin %}<a target="_blank" rel="noopener" href="{{item.linkedin}}"><img src="{{ 'assets/img/team/linkedin-gray.svg'|theme }}" alt="linkedin" /></a>{% endif %}
+					{% if item.dribbble %}<a target="_blank" rel="noopener" href="{{item.dribbble}}"><img src="{{ 'assets/img/team/dribbble-gray.svg'|theme }}" alt="dribbble" /></a>{% endif %}
+					{% if item.twitter %}<a target="_blank" rel="noopener" href="{{item.twitter}}"><img src="{{ 'assets/img/team/twitter-gray.svg'|theme }}" alt="twitter" /></a>{% endif %}
+					{% if item.behance %}<a target="_blank" rel="noopener" href="{{item.behance}}"><img src="{{ 'assets/img/team/behance-gray.svg'|theme }}" alt="behance" /></a>{% endif %}
+					{% if item.pinterest %}<a target="_blank" rel="noopener" href="{{item.pinterest}}"><img src="{{ 'assets/img/team/pinterest-gray.svg'|theme }}" alt="pinterest" /></a>{% endif %}
+				</div>
+			</div>
+			<h4 class="pt14">
+				{{item.position}}
+			</h4>
+		</div>
+		{% endfor %}
+
+		{% if vacancies.pages is not empty %}
+		{% for page in vacancies.pages %}
+		{% if not page.is_hidden %}
+		<div class="col-xl-3 col-6 team-member-card">
+			<div class="team-jobs">
+				<h3 class="apply">{{ 'team.apply_for_job_in_uxda'|_ }}</h3>
+				<h4 class="pt14 position">{{ page.title }}</h4>
+				<a href="{{ page.url | app }}" class="uxda-btn-href white">
+					{{ 'team.read_more'|_ }} <span class="btn-arrow-right-white"></span>
+				</a>
+			</div>
+		</div>
+		{% endif %}
+		{% endfor %}
+		{% endif %}
+		
+    </div>
+</div>

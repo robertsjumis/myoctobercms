@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="9px" viewBox="0 0 11 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>checkmark</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="atoms/form/a-form-checkbox-active" transform="translate(-7.000000, -7.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M8.58130165,11.4325098 C8.13189311,11.0926203 7.50734863,11.2028342 7.18634253,11.6786796 C6.86533642,12.154525 6.96942717,12.8158089 7.41883571,13.1556984 L10.9188043,15.8027393 C11.3423683,16.1230826 11.9271912,16.0458115 12.2634167,15.6250792 L17.7633672,8.74277297 C18.1201081,8.29636901 18.0675271,7.62827933 17.6459242,7.2505529 C17.2243214,6.87282647 16.5933492,6.92850061 16.2366084,7.37490457 L11.3316817,13.5126338 L8.58130165,11.4325098 Z" id="checkmark"></path>
+        </g>
+    </g>
+</svg>

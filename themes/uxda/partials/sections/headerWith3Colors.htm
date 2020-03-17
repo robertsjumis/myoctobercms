@@ -1,0 +1,11 @@
+[viewBag]
+==
+<div class="container portfolio-page-header">
+    <h1>
+        <span class="light-gray portfolio-animation delay-600">{{ section.light_gray }} </span>
+		<span class="gray portfolio-animation delay-700">{{ section.gray }} </span>
+		<span class="green portfolio-animation delay-800">{{ section.green }} </span>
+    </h1>
+    {% if section.sub_title %}<h2 class="slideFromBottomHeader delay-900">{{ section.sub_title }}</h2>{% endif %}
+    <p class="p2left slideFromBottomHeader delay-900">{{ section.desc|raw }}</p>
+</div>

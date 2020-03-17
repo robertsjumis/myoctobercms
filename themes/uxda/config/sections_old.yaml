@@ -1,0 +1,259 @@
+
+slogan:
+    name: Slogan
+    description: Slogan With Image
+    icon: icon-black-tie
+    fields:
+        _skip:
+            label: Slogan
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: text
+        image:
+            label: Image
+            type: mediafinder
+            mode: image
+            imageWidth: 300
+            imageHeight: 300
+
+blockCardWithImage:
+    name: Card With Image
+    description: Best for promotion section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Card With Image
+            type: section
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 300
+                        imageHeight: 300
+
+
+blockWithImages:
+    name: Block With Images
+    description: Best use 3 images
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Block With Images
+            comment: Best use 3 images
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: text
+        images:
+            label: Images
+            type: repeater
+            form:
+                fields:
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 300
+                        imageHeight: 300
+
+
+blockWithIcons:
+    name: Block With Icons
+    description: Best use 3 icons
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Block With Icons
+            comment: Best use 3 icons
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: text
+        icons:
+            label: Icons
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    icon:
+                        label: Icon Class
+                        type: text
+
+
+blockRichWithImage:
+    name: Block Rich With Image
+    description: 1 Image and 2 section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Block Rich With Image
+            comment: 1 Image and 2 section
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: text
+        content1:
+            label: Content Part 1
+            type: richeditor
+            comment: With image on right
+        content2:
+            label: Content Part 2
+            type: richeditor
+            comment: After Content 1
+        image:
+            label: Image
+            type: mediafinder
+            mode: image
+            imageWidth: 300
+            imageHeight: 300
+
+blockCheckboxWithImage:
+    name: Block Checkbox With Image
+    description: Best use 3 Checkboxs
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Block Checkbox With Image
+            comment: Best use 3 Checkboxs
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: text
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+        image:
+            label: Image
+            type: mediafinder
+            mode: image
+            imageWidth: 300
+            imageHeight: 300
+
+blockFromToImage:
+    name: Block From To Image
+    description: Only 2 images
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Block From To Image
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: text
+        image_from:
+            label: Image
+            type: mediafinder
+            mode: image
+            imageWidth: 300
+            imageHeight: 300
+        image_to:
+            label: Image
+            type: mediafinder
+            mode: image
+            imageWidth: 300
+            imageHeight: 300
+
+blockListWithCheckboxs:
+    name: Block Lisk With Checkboxs
+    description: Block list section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Block Lisk With Checkboxs
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: text
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+
+counters:
+    name: Counters
+    description: Counters section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Counters
+            type: section
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    count:
+                        label: Count
+                        type: text
+                    icon:
+                        label: Icon Class
+                        type: text
+
+logos:
+    name: Logos
+    description: Logos section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Logos
+            type: section
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    class:
+                        label: Css Class
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 300
+                        imageHeight: 300
+
+

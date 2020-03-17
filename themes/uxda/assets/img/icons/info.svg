@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>atoms/icons/24/a-ic-24-info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="DESKTOP-FINAL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-portfolio" transform="translate(-636.000000, -2258.000000)" fill="#6BC727" fill-rule="nonzero">
+            <g id="project-1" transform="translate(-322.000000, 1674.000000)">
+                <g id="text" transform="translate(954.000000, 132.000000)">
+                    <g id="link-2" transform="translate(0.000000, 448.000000)">
+                        <g id="atoms/icons/24/a-ic-24-info">
+                            <path d="M12,4 C7.582,4 4,7.582 4,12 C4,16.418 7.582,20 12,20 C16.418,20 20,16.418 20,12 C20,7.582 16.418,4 12,4 Z M12.6666667,16 L11.3333333,16 L11.3333333,11.3333333 L12.6666667,11.3333333 L12.6666667,16 Z M12,9.66666667 C11.448,9.66666667 11,9.21866667 11,8.66666667 C11,8.11466667 11.448,7.66666667 12,7.66666667 C12.552,7.66666667 13,8.11466667 13,8.66666667 C13,9.21866667 12.552,9.66666667 12,9.66666667 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

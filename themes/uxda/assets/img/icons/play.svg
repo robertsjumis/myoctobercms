@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="19px" viewBox="0 0 16 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>atoms/icons/24/a-ic-24-play</title>
+    <desc>Created with Sketch.</desc>
+    <g id="DESKTOP-FINAL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-portfolio" transform="translate(-637.000000, -2289.000000)" fill="#6BC727" fill-rule="nonzero">
+            <g id="project-1" transform="translate(-322.000000, 1674.000000)">
+                <g id="text" transform="translate(954.000000, 132.000000)">
+                    <g id="link-1" transform="translate(0.000000, 480.000000)">
+                        <g id="atoms/icons/24/a-ic-24-play">
+                            <path d="M20.2363446,11.0238883 L15.6062938,8.26471904 C14.5732027,7.6468723 12.8834622,6.64057151 11.8482642,6.0252242 L7.04844423,3.26598547 C6.01569288,2.64820816 5,3.14372139 5,4.36761199 L5,19.9196595 C5,21.139315 6.01569288,21.6369805 7.048852,21.0216332 L11.7637874,18.2624639 C12.7989853,17.6471166 14.5322216,16.6408158 15.5653127,16.0229691 L20.2172473,13.2637998 C21.2478918,12.645953 21.2673969,11.6392356 20.2363446,11.0238883 Z" id="Path"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

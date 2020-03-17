@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="384px" viewBox="0 0 1440 384" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>road-map</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.8" offset="50.0184755%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.8" offset="50.0184755%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#6CC727" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#6CC727" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="DESKTOP-FINAL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-process" transform="translate(0.000000, -668.000000)">
+            <g id="road-map" transform="translate(0.000000, 500.000000)">
+                <g transform="translate(0.000000, 169.000000)">
+                    <path d="M1,289 C28.0711977,262 62.904531,248.5 105.5,248.5 C169.393204,248.5 182,276.5 249,269 C316,261.5 366,212 437,212 C508,212 524,227 579,222 C634,217 650,172 721,172 C792,172 817,182 863,182 C909,182 933.87307,132 1005,132 C1076.12693,132 1088,142 1147.5,142 C1207,142 1229.13932,108.718056 1289,82 C1328.90712,64.1879627 1379.57379,47.1879627 1441,31" id="Path-2" stroke="#6CC727" stroke-width="2"></path>
+                    <rect id="fade" fill="url(#linearGradient-1)" transform="translate(76.000000, 269.000000) rotate(-90.000000) translate(-76.000000, -269.000000) " x="0" y="193" width="152" height="152"></rect>
+                    <rect id="fade" fill="url(#linearGradient-2)" transform="translate(1324.000000, 75.000000) scale(-1, 1) rotate(-90.000000) translate(-1324.000000, -75.000000) " x="1256" y="-41" width="136" height="232"></rect>
+                    <rect id="Line" fill="#999999" x="212" y="295" width="1" height="88"></rect>
+                    <g id="flag" transform="translate(1195.000000, 0.000000)">
+                        <circle id="Oval" fill="#6CC727" cx="4" cy="132" r="4"></circle>
+                        <path d="M4,131.5 L4,0" id="Path-3" stroke="#6CC727" stroke-width="2" stroke-linecap="round"></path>
+                        <polyline id="Path-4" stroke="#6CC727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="4.5 4 92 4 82 31.5 92 58.5 4.5 58.5"></polyline>
+                        <text id="YOUR-SUCCESS-STORY" font-family="Gilroy-ExtraBold, Gilroy" font-size="12" font-weight="600" line-spacing="14" letter-spacing="0.4" fill="#6CC727">
+                            <tspan x="14" y="21">YOUR</tspan>
+                            <tspan x="14" y="35">SUCCESS</tspan>
+                            <tspan x="14" y="49">STORY</tspan>
+                        </text>
+                    </g>
+                    <g id="molecules/charts/road-map/m-charts--road-map-step" transform="translate(1016.000000, 32.000000)">
+                        <g id="atoms/charts/road-map/a-charts-road-map-dot" transform="translate(48.000000, 60.000000)" fill-rule="evenodd">
+                            <rect id="Line" fill="url(#linearGradient-3)" x="11" y="0" width="1" height="35"></rect>
+                            <circle id="Oval" stroke-opacity="0.5" stroke="#6CC727" stroke-width="1" fill="#FFFFFF" cx="11.5" cy="44.5" r="11"></circle>
+                            <circle id="Oval" fill="#6CC727" cx="11.5" cy="44.5" r="5.5"></circle>
+                        </g>
+                        <text id="txt" font-family="Lato-Light, Lato" font-size="16" font-weight="300" line-spacing="20" fill="#666666">
+                            <tspan x="3.788" y="16.5">Guiding through </tspan>
+                            <tspan x="19.496" y="36.5">the product </tspan>
+                            <tspan x="14.84" y="56.5">development</tspan>
+                        </text>
+                    </g>
+                    <g id="molecules/charts/road-map/m-charts--road-map-step" transform="translate(872.000000, 29.000000)">
+                        <g id="atoms/charts/road-map/a-charts-road-map-dot" transform="translate(48.000000, 80.000000)" fill-rule="evenodd">
+                            <rect id="Line" fill="url(#linearGradient-3)" x="11" y="0" width="1" height="35"></rect>
+                            <circle id="Oval" stroke-opacity="0.5" stroke="#6CC727" stroke-width="1" fill="#FFFFFF" cx="11.5" cy="44.5" r="11"></circle>
+                            <circle id="Oval" fill="#6CC727" cx="11.5" cy="44.5" r="5.5"></circle>
+                        </g>
+                        <text id="txt" font-family="Lato-Light, Lato" font-size="16" font-weight="300" line-spacing="20" fill="#666666">
+                            <tspan x="24.028" y="16.5">Ensuring a </tspan>
+                            <tspan x="23.532" y="36.5">systematic </tspan>
+                            <tspan x="6.28" y="56.5">implementation </tspan>
+                            <tspan x="39.84" y="76.5">of UX</tspan>
+                        </text>
+                    </g>
+                    <g id="molecules/charts/road-map/m-charts--road-map-step" transform="translate(728.000000, 91.000000)">
+                        <g id="atoms/charts/road-map/a-charts-road-map-dot" transform="translate(48.000000, 40.000000)" fill-rule="evenodd">
+                            <rect id="Line" fill="url(#linearGradient-3)" x="11" y="0" width="1" height="35"></rect>
+                            <circle id="Oval" stroke-opacity="0.5" stroke="#6CC727" stroke-width="1" fill="#FFFFFF" cx="11.5" cy="44.5" r="11"></circle>
+                            <circle id="Oval" fill="#6CC727" cx="11.5" cy="44.5" r="5.5"></circle>
+                        </g>
+                        <text id="txt" font-family="Lato-Light, Lato" font-size="16" font-weight="300" line-spacing="20" fill="#666666">
+                            <tspan x="12.096" y="16.5">Delivering full </tspan>
+                            <tspan x="4.356" y="36.5">visual prototype</tspan>
+                        </text>
+                    </g>
+                    <g id="molecules/charts/road-map/m-charts--road-map-step" transform="translate(584.000000, 92.000000)">
+                        <g id="atoms/charts/road-map/a-charts-road-map-dot" transform="translate(48.000000, 60.000000)" fill-rule="evenodd">
+                            <rect id="Line" fill="url(#linearGradient-3)" x="11" y="0" width="1" height="35"></rect>
+                            <circle id="Oval" stroke-opacity="0.5" stroke="#6CC727" stroke-width="1" fill="#FFFFFF" cx="11.5" cy="44.5" r="11"></circle>
+                            <circle id="Oval" fill="#6CC727" cx="11.5" cy="44.5" r="5.5"></circle>
+                        </g>
+                        <text id="txt" font-family="Lato-Light, Lato" font-size="16" font-weight="300" line-spacing="20" fill="#666666">
+                            <tspan x="9.176" y="16.5">Creating visual </tspan>
+                            <tspan x="17.904" y="36.5">identity that </tspan>
+                            <tspan x="33.996" y="56.5">WOWs</tspan>
+                        </text>
+                    </g>
+                    <g id="molecules/charts/road-map/m-charts--road-map-step" transform="translate(440.000000, 92.000000)">
+                        <g id="atoms/charts/road-map/a-charts-road-map-dot" transform="translate(48.000000, 80.000000)" fill-rule="evenodd">
+                            <rect id="Line" fill="url(#linearGradient-3)" x="11" y="0" width="1" height="35"></rect>
+                            <circle id="Oval" stroke-opacity="0.5" stroke="#6CC727" stroke-width="1" fill="#FFFFFF" cx="11.5" cy="44.5" r="11"></circle>
+                            <circle id="Oval" fill="#6CC727" cx="11.5" cy="44.5" r="5.5"></circle>
+                        </g>
+                        <text id="txt" font-family="Lato-Light, Lato" font-size="16" font-weight="300" line-spacing="20" fill="#666666">
+                            <tspan x="1.136" y="16.5">Creating a match </tspan>
+                            <tspan x="16.336" y="36.5">between the </tspan>
+                            <tspan x="18.128" y="56.5">product and </tspan>
+                            <tspan x="41.804" y="76.5">users</tspan>
+                        </text>
+                    </g>
+                    <g id="molecules/charts/road-map/m-charts--road-map-step" transform="translate(296.000000, 147.000000)">
+                        <g id="atoms/charts/road-map/a-charts-road-map-dot" transform="translate(48.000000, 40.000000)" fill-rule="evenodd">
+                            <rect id="Line" fill="url(#linearGradient-3)" x="11" y="0" width="1" height="35"></rect>
+                            <circle id="Oval" stroke-opacity="0.5" stroke="#6CC727" stroke-width="1" fill="#FFFFFF" cx="11.5" cy="44.5" r="11"></circle>
+                            <circle id="Oval" fill="#6CC727" cx="11.5" cy="44.5" r="5.5"></circle>
+                        </g>
+                        <text id="txt" font-family="Lato-Light, Lato" font-size="16" font-weight="300" line-spacing="20" fill="#666666">
+                            <tspan x="13.808" y="16.5">Defining user </tspan>
+                            <tspan x="16.184" y="36.5">expectations</tspan>
+                        </text>
+                    </g>
+                    <g id="molecules/charts/road-map/m-charts-road-map-selected-step" transform="translate(184.000000, 239.000000)">
+                        <circle id="bg" fill="#6CC727" fill-rule="evenodd" cx="28" cy="28" r="28"></circle>
+                        <g id="atoms/icons/32/roadmap/a-ic-32-roadmap-team-on-same-page" transform="translate(12.000000, 12.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                            <path d="M26.5,1 C27.2796961,1 27.9204487,1.59488808 27.9931334,2.35553999 L28,2.5 L28,27.5 C28,29.6801701 27.0351745,30.913139 25.1999568,30.9955789 L25,31 L4.97033286,30.9991191 C3.89756706,30.935355 3.08518362,30.5291632 2.58397485,29.7773501 C2.23095616,29.2478221 2.03165372,28.6752973 1.99070724,28.0674813 C1.95605298,27.5556976 2.31285791,27.1079033 2.80528538,27.0168164 L2.94609317,27.0009216 L6,27 L6,2.5 C6,1.72030388 6.59488808,1.07955132 7.35553999,1.00686658 L7.5,1 L26.5,1 Z M26.5,2 L7.5,2 C7.25454011,2 7.05039163,2.17687516 7.00805567,2.41012437 L7,2.5 L7,27 L22.0173853,27 C22.5415027,26.9999004 22.9767382,27.4045056 23.0148787,27.9272244 C23.1198918,29.3664422 23.7403123,30 25,30 C26.3135734,30 26.9482859,29.3013965 26.9969612,27.7043276 L27,27.5 L27,2.5 C27,2.25454011 26.8231248,2.05039163 26.5898756,2.00805567 L26.5,2 Z M22.0175301,27.9999964 L2.9884342,27.9999964 L3.00775088,28.1833198 C3.06014491,28.5466474 3.19526483,28.8915094 3.41602515,29.2226499 C3.70177717,29.6512779 4.15829173,29.9055127 4.80144048,29.98229 L5,29.9999964 L22.6852998,29.9999964 L22.564057,29.8287411 C22.2561377,29.3546633 22.0716624,28.7418864 22.0175301,27.9999964 Z M13.5,18 C13.7761424,18 14,18.2238576 14,18.5 L14,22.5 C14,22.7761424 13.7761424,23 13.5,23 L9.5,23 C9.22385763,23 9,22.7761424 9,22.5 L9,18.5 C9,18.2238576 9.22385763,18 9.5,18 L13.5,18 Z M13,19 L10,19 L10,22 L13,22 L13,19 Z M24,20 L24,21 L16,21 L16,20 L24,20 Z M13.5,11 C13.7761424,11 14,11.2238576 14,11.5 L14,15.5 C14,15.7761424 13.7761424,16 13.5,16 L9.5,16 C9.22385763,16 9,15.7761424 9,15.5 L9,11.5 C9,11.2238576 9.22385763,11 9.5,11 L13.5,11 Z M13,12 L10,12 L10,15 L13,15 L13,12 Z M24,13 L24,14 L16,14 L16,13 L24,13 Z M13,4 L13,5 L10,5 L10,8 L13,8 L13,7.5 L14,7.5 L14,8.5 C14,8.74545989 13.8231248,8.94960837 13.5898756,8.99194433 L13.5,9 L9.5,9 C9.25454011,9 9.05039163,8.82312484 9.00805567,8.58987563 L9,8.5 L9,4.5 C9,4.25454011 9.17687516,4.05039163 9.41012437,4.00805567 L9.5,4 L13,4 Z M15.1746043,3.6203717 L15.8253957,4.3796283 L12.3253957,7.3796283 C12.1518223,7.52840548 11.903627,7.53830399 11.7205258,7.4146896 L11.6464466,7.35355339 L10.6464466,6.35355339 L11.3535534,5.64644661 L12.0261519,6.31904516 L15.1746043,3.6203717 Z M24,6 L24,7 L16,7 L16,6 L24,6 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

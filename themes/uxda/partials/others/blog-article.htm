@@ -1,0 +1,111 @@
+[viewBag]
+==
+{% set post=blogeditor.post %}
+{% set featured_image=post.filename %}
+{{ uxda_schema_article(post.title, post.filename|media, post.published_at, post.updated_at, post.authors, post.excerpt, ''|url) }}
+<div class="article-page-bg">
+    <div class="container article-header">
+        <a href="{{'/blog'|app}}" class="uxda-back-href">
+            <span class="btn-arrow-left-gray"></span>
+            <span>back to latest articles</span>
+        </a>
+        <h1>{{post.title}}</h1>
+        <div class="blog-authors">
+            <div class="blog-author-avatar">
+                {% for author in post.authors %}
+                <a href="#" class="void">
+					<img class="avatar" src="{{ author.image ? author.image|media|resize(128) : 'assets/img/avatar.png'|theme }}" alt="{{author.name}}" />
+				</a>
+                {% endfor %}
+            </div>
+            <div class="mobile-authors">
+                <div>
+                    {% for author in post.authors %}
+					{% if not loop.first %}<span class="author"> & </span>{% endif %}
+                    <a href="#" class="author void popover-team" data-team="{{author|uxda_team_json()}}" data-image="{{ author.image ? author.image|media|resize(128) : 'assets/img/avatar.png'|theme }}">{{author.name}}</a>
+                    {% endfor %}
+                </div>
+                <p class="pt14 gray"> • <span class="reading-time" data-seconds="{{post.reading_time}}">0</span></p>
+            </div>
+        </div>
+        </div>
+    <div class="article-img">
+        <img {{ featured_image ? featured_image|media|uxda_responsive() }} alt="{{post.title}}" />
+    </div>
+    <div class="container">
+        <div class="row test-abs">
+            <div>
+				<div class="col-xl-2 share-sticky sticky-opacity" id="sticky">
+					<p>{{post.title}}</p>
+					<p class="share">Share:</p>
+					<div class="sidebar-social">
+						<a href="#" class="social_share" data-type="twitter"><img class="avatar" src="{{ 'assets/img/icons/social/twitter.svg'|theme }}" alt="Twitter"/></a>
+						<a href="#" class="social_share" data-type="linkedin"><img class="avatar" src="{{ 'assets/img/icons/social/linkedin.svg'|theme }}" alt="LinkedIn"/></a>
+						<a href="#" class="social_share" data-type="fb"><img class="avatar" src="{{ 'assets/img/icons/social/facebook.svg'|theme }}" alt="Facebook"/></a>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+
+	<div class="article-content">
+{#		{{post.content_html|raw}} #}
+        {% component 'blogeditor' %}
+
+		<div class="article-tag-spacing">
+			{% for tag in post.tags %}
+			<a href="{{('/blog/tag/' ~ tag.slug)|app}}" class="badge"><span>{{tag.name}}</span></a>
+			{% endfor %}
+		</div>
+
+	</div>
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-8 article-social">
+                <p class="p4left">Share:</p>
+                <div>
+                    <a href="#" class="social_share" data-type="linkedin"><img class="avatar" src="{{ 'assets/img/footer/linkedin.svg'|theme }}" alt="LinkedIn"/></a>
+                    <a href="#" class="social_share" data-type="fb"><img class="avatar" src="{{ 'assets/img/team/social/facebook.svg'|theme }}" alt="Facebook"/></a>
+                    <a href="#" class="social_share" data-type="twitter"><img class="avatar" src="{{ 'assets/img/footer/twitter.svg'|theme }}" alt="Twitter"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mobile-padding-0">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-8 article-about-author">
+                <h3>ABOUT THE AUTHOR</h3>
+                {% for author in post.authors %}
+                <div class="aa-wrap">
+                    <img class="aa-avatar" src="{{author.image ? author.image|media|resize(128) : 'assets/img/avatar.png'|theme}}" alt="{{author.name}}" />
+                    <div class="aa-content">
+                        <h5>{{author.name}}, {{author.position}}</h5>
+                        <p>{{author.description}}</p>
+                        <div class="social-aa">
+                            {% if author.twitter %}
+                            <a href="{{author.twitter}}" target="_blank" rel="noopener"><img src="{{ 'assets/img/icons/social-gray/twitter.svg'|theme }}" alt="Twitter" /></a>
+                            {% endif %}
+                            {% if author.linkedin %}
+                            <a href="{{author.linkedin}}" target="_blank" rel="noopener"><img src="{{ 'assets/img/icons/social-gray/linkedin.svg'|theme }}" alt="LinkedIn" /></a>
+                            {% endif %}
+                            {% if author.dribbble %}
+                            <a href="{{author.dribbble}}" target="_blank" rel="noopener"><img src="{{ 'assets/img/icons/social-gray/dribble.svg'|theme }}" alt="dribble" /></a>
+                            {% endif %}
+                            {% if author.behance %}
+                            <a href="{{author.behance}}" target="_blank" rel="noopener"><img src="{{ 'assets/img/icons/social-gray/behance.svg'|theme }}" alt="Behance" /></a>
+                            {% endif %}
+                            {% if author.pinterest %}
+                            <a href="{{author.pinterest}}" target="_blank" rel="noopener"><img src="{{ 'assets/img/icons/social-gray/pinterest.svg'|theme }}" alt="Pinterest" /></a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    {% partial "others/blog-more-our-blog" %}
+    
+</div>

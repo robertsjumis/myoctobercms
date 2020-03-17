@@ -1,0 +1,13 @@
+plugin:
+    name: 'cubecamp.blog::lang.plugin.name'
+    description: 'cubecamp.blog::lang.plugin.description'
+    author: CubeCamp
+    icon: oc-icon-beer
+    homepage: ''
+permissions:
+    'cubecamp.blog::comments':
+        tab: 'cubecamp.comments::lang.plugin.name'
+        label: 'cubecamp.blog::lang.plugin.comments'
+    'cubecamp.blog::posts':
+        tab: 'cubecamp.blog::lang.plugin.name'
+        label: 'cubecamp.blog::lang.plugin.posts'

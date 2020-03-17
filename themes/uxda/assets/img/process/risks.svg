@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="941px" height="443px" viewBox="0 0 941 443" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>risks</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="50%" x2="0%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#6CC727" stop-opacity="0.1" offset="0%"></stop>
+            <stop stop-color="#6CC727" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="50%" x2="0%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#FFE000" stop-opacity="0.1" offset="0%"></stop>
+            <stop stop-color="#FFE000" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="48.1493951%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#FF7C00" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FF7C00" stop-opacity="0.1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="50%" x2="0%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#DA1B1B" stop-opacity="0.1" offset="0%"></stop>
+            <stop stop-color="#DA1B1B" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="28.4696175%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#6CC727" stop-opacity="0.1" offset="0%"></stop>
+            <stop stop-color="#6CC727" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="46.9975113%" x2="29.2715047%" y2="46.9975113%" id="linearGradient-6">
+            <stop stop-color="#FFE000" stop-opacity="0.1" offset="0%"></stop>
+            <stop stop-color="#FFE000" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="28.4638577%" y1="50%" x2="100%" y2="50%" id="linearGradient-7">
+            <stop stop-color="#FF7C00" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FF7C00" stop-opacity="0.1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="28.9815965%" y2="50%" id="linearGradient-8">
+            <stop stop-color="#DA1B1B" stop-opacity="0.1" offset="0%"></stop>
+            <stop stop-color="#DA1B1B" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="DESKTOP-FINAL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-process" transform="translate(-155.000000, -8743.000000)">
+            <g id="risks" transform="translate(152.000000, 8504.000000)">
+                <g transform="translate(0.000000, 240.000000)">
+                    <rect id="Rectangle" fill="url(#linearGradient-1)" x="24" y="16" width="508" height="98"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-2)" x="24" y="118" width="508" height="98"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-3)" x="24" y="220" width="508" height="98"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-4)" x="24" y="322" width="508" height="98"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-5)" transform="translate(697.000000, 65.000000) scale(-1, 1) translate(-697.000000, -65.000000) " x="532" y="16" width="330" height="98"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-6)" transform="translate(697.000000, 167.000000) scale(-1, 1) translate(-697.000000, -167.000000) " x="532" y="118" width="330" height="98"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-7)" transform="translate(697.000000, 269.000000) scale(-1, 1) translate(-697.000000, -269.000000) " x="532" y="220" width="330" height="98"></rect>
+                    <rect id="Rectangle" fill="url(#linearGradient-8)" transform="translate(697.000000, 371.000000) scale(-1, 1) translate(-697.000000, -371.000000) " x="532" y="322" width="330" height="98"></rect>
+                    <path d="M434,71 C392.35048,156.106459 336.35048,228.773126 266,289 C199.683813,345.773126 119.183813,389.273126 24.5,419.5" id="Path-6" stroke="#6CC727" stroke-width="2" opacity="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,5"></path>
+                    <path id="Path-5" d="M24,-0.5 L28.5,8.5 L24.5,8.5 L24.5,419.5 L583.5,419.5 L583.5,415.5 L592.5,420 L583.5,424.5 L583.5,420.5 L23.5,420.5 L23.5,8.5 L19.5,8.5 L24,-0.5 Z" fill="#999999" fill-rule="nonzero"></path>
+                    <text id="expertise" transform="translate(8.000000, 59.000000) rotate(-90.000000) translate(-8.000000, -59.000000) " font-family="Gilroy-ExtraBold, Gilroy" font-size="14" font-weight="600" line-spacing="16" letter-spacing="2" fill="#999999">
+                        <tspan x="-35" y="64">EXPERTISE</tspan>
+                    </text>
+                    <text id="EXPENSES" transform="translate(535.500000, 436.000000) rotate(-360.000000) translate(-535.500000, -436.000000) " font-family="Gilroy-ExtraBold, Gilroy" font-size="14" font-weight="600" line-spacing="16" letter-spacing="2" fill="#999999">
+                        <tspan x="495" y="441">EXPENSES</tspan>
+                    </text>
+                    <text id="LOW-RISK" opacity="0.300000012" font-family="Gilroy-ExtraBold, Gilroy" font-size="32" font-weight="600" line-spacing="56" letter-spacing="-0.666666667" fill="#6CC727">
+                        <tspan x="716" y="68">LOW RISK</tspan>
+                    </text>
+                    <text id="MEDIUM-RISK" opacity="0.300000012" font-family="Gilroy-ExtraBold, Gilroy" font-size="32" font-weight="600" line-spacing="56" letter-spacing="-0.666666667" fill="#E8B700">
+                        <tspan x="716" y="170">MEDIUM RISK</tspan>
+                    </text>
+                    <text id="HIGH-RISK" opacity="0.300000012" font-family="Gilroy-ExtraBold, Gilroy" font-size="32" font-weight="600" line-spacing="56" letter-spacing="-0.666666667" fill="#FF7C00">
+                        <tspan x="716" y="272">HIGH RISK</tspan>
+                    </text>
+                    <text id="VERY-HIGH-RISK" opacity="0.300000012" font-family="Gilroy-ExtraBold, Gilroy" font-size="32" font-weight="600" line-spacing="56" letter-spacing="-0.666666667" fill="#DA1B1B">
+                        <tspan x="716" y="374">VERY HIGH RISK</tspan>
+                    </text>
+                    <text id="inhouse-designer" font-family="Gilroy-ExtraBold, Gilroy" font-size="16" font-weight="600" letter-spacing="2.28571429" fill="#666666">
+                        <tspan x="322" y="265">INHOUSE </tspan>
+                        <tspan x="322" y="284">DESIGNER</tspan>
+                    </text>
+                    <rect id="Rectangle" fill="#FFF1E5" x="259" y="248" width="47" height="43"></rect>
+                    <g id="atoms/icons/48/value-pyramid/a-ic-48-value-value" transform="translate(258.000000, 245.000000)" stroke="#666666" stroke-linejoin="round" stroke-width="2">
+                        <path d="M2,36 L45,36 L45,38 C45,39.6568542 43.6568542,41 42,41 L5,41 C3.34314575,41 2,39.6568542 2,38 L2,36 L2,36 Z" id="Rectangle"></path>
+                        <path d="M6,7 L41,7 C42.1045695,7 43,7.8954305 43,9 L43,36 L43,36 L4,36 L4,9 C4,7.8954305 4.8954305,7 6,7 Z" id="Rectangle"></path>
+                        <rect id="Rectangle" x="8" y="11" width="31" height="21"></rect>
+                        <path d="M20,36 L27,36 L27,37 C27,37.5522847 26.5522847,38 26,38 L21,38 C20.4477153,38 20,37.5522847 20,37 L20,36 L20,36 Z" id="Rectangle"></path>
+                    </g>
+                    <circle id="Oval" stroke="#F0F9E9" stroke-width="4" fill="#6CC727" cx="430" cy="65" r="34"></circle>
+                    <g id="atoms/icons/48/value-pyramid/a-ic-48-value-value" transform="translate(406.000000, 43.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M36.4510541,6 L36.6208885,6.00720769 C37.2390525,6.05980561 37.8018542,6.39742737 38.1383771,6.92624902 L44.4473283,16.8403153 C44.918529,17.5807735 44.8519198,18.5419216 44.2830842,19.2103035 L25.5230788,41.2533098 C25.2248694,41.6037058 24.8318564,41.8257648 24.4139664,41.9138606 C24.1534046,42.0285502 23.847711,42.0286966 23.5865835,41.9143489 C23.2712569,41.8480574 22.9669061,41.7041031 22.7037627,41.4801514 C22.6221968,41.4107336 22.546339,41.3348758 22.4769212,41.2533098 L3.71691585,19.2103035 C3.14808017,18.5419216 3.08147098,17.5807735 3.55267165,16.8403153 L9.86162292,6.92624902 C10.2287388,6.34935267 10.8651452,6 11.5489459,6 L36.4510541,6 Z M41.8359823,19 L31.2559823,19 L25.9959823,37.611 L41.8359823,19 Z M16.7429823,19 L6.16398227,19 L22.0019823,37.61 L16.7429823,19 Z M29.1779823,19 L18.8219823,19 L24,37.3229482 L29.1779823,19 Z M10.9679823,8.911 L5.82098227,17 L15.7479823,17 L10.9679823,8.911 Z M24,8.9656819 L19.2509823,17 L28.7479823,17 L24,8.9656819 Z M37.0309823,8.911 L32.2509823,17 L42.1779823,17 L37.0309823,8.911 Z M35.2479823,7.999 L25.7509823,7.999 L30.5,16.0343181 L35.2479823,7.999 Z M22.2479823,7.999 L12.7509823,7.999 L17.5,16.0343181 L22.2479823,7.999 Z" id="Combined-Shape"></path>
+                    </g>
+                    <text id="Design-agency" font-family="Gilroy-ExtraBold, Gilroy" font-size="16" font-weight="600" letter-spacing="2.28571429" fill="#666666">
+                        <tspan x="417" y="163">DESIGN </tspan>
+                        <tspan x="417" y="182">AGENCY</tspan>
+                    </text>
+                    <rect id="Rectangle" fill="#FFFCE6" x="355" y="145" width="47" height="45"></rect>
+                    <g id="atoms/icons/48/value-pyramid/a-ic-48-value-value" transform="translate(353.000000, 143.000000)" stroke="#666666">
+                        <g id="building" transform="translate(2.000000, 5.000000)">
+                            <rect id="Rectangle" stroke-width="2" x="5" y="1" width="34" height="36" rx="1"></rect>
+                            <rect id="Rectangle" stroke-width="2" x="1" y="37" width="42" height="1" rx="0.5"></rect>
+                            <rect id="Rectangle" stroke-width="2" x="17" y="27" width="10" height="10" rx="1"></rect>
+                            <rect id="Rectangle" stroke-width="2" x="19" y="17" width="6" height="6" rx="1"></rect>
+                            <rect id="Rectangle" stroke-width="2" x="9" y="17" width="6" height="6" rx="1"></rect>
+                            <rect id="Rectangle" stroke-width="2" x="29" y="17" width="6" height="6" rx="1"></rect>
+                            <rect id="Rectangle" stroke-width="2" x="29" y="7" width="6" height="6" rx="1"></rect>
+                            <rect id="Rectangle" stroke-width="2" x="19" y="7" width="6" height="6" rx="1"></rect>
+                            <rect id="Rectangle" stroke-width="2" x="9" y="7" width="6" height="6" rx="1"></rect>
+                        </g>
+                    </g>
+                    <g id="atoms/other/logos/a-logo-uxda-green" transform="translate(482.000000, 51.000000)" fill="#6CC727">
+                        <g id="small" transform="translate(0.000000, 3.000000)">
+                            <path d="M72.9947332,18.9895442 C75.0884219,18.9895442 76.7926206,17.2831559 76.7926206,15.1866776 L76.7926206,6.82057979 C76.7926206,4.72419329 75.0883444,3.01771319 72.9947332,3.01771319 L60.8207896,3.01771319 L60.8207896,18.9895442 L72.9947332,18.9895442 Z M73.0365738,22.0563497 L59.3106054,22.0563497 C58.4779549,22.0563497 57.8029183,21.3830528 57.8029183,20.5526417 L57.8029183,1.50355047 C57.8029183,0.673168055 58.4779262,1.16788749e-05 59.3106054,1.16788749e-05 L73.0365738,1.16788749e-05 C76.7992657,1.16788749e-05 79.8592563,3.05225216 79.8592563,6.80545368 L79.8592563,15.2507385 C79.8592563,19.0040734 76.7993016,22.0563497 73.0365738,22.0563497 Z M15.2675583,22.056338 L6.7889485,22.056338 C3.04500514,22.056338 0,18.998426 0,15.2385041 L0,1.50835234 C0,0.675311422 0.672579044,5.68434189e-14 1.50226198,5.68434189e-14 C2.33169318,5.68434189e-14 3.00418649,0.675397502 3.00418649,1.50835234 L3.00418649,15.2385041 C3.00418649,17.3339144 4.70239107,19.0392944 6.7889485,19.0392944 L15.2675583,19.0392944 C17.3541611,19.0392944 19.052489,17.3338688 19.052489,15.2385041 L19.052489,1.50835234 C19.052489,0.675325808 19.7248849,5.68434189e-14 20.5544135,5.68434189e-14 C21.3839421,5.68434189e-14 22.056338,0.675325808 22.056338,1.50835234 L22.056338,15.2385041 C22.056338,18.998466 19.0114618,22.056338 15.2675583,22.056338 Z M31.4333579,21.6218589 C31.1538083,21.9014068 30.7778205,22.056338 30.384696,22.056338 C29.9915715,22.056338 29.6155837,21.9014068 29.3360341,21.6218589 C28.756683,21.0425113 28.756683,20.1038204 29.3360341,19.5242044 L37.8322026,11.0280867 L29.3361593,2.53201994 C28.7566061,1.95247028 28.7565845,1.0135669 29.3360674,0.434624171 C29.9152597,-0.144833067 30.8540921,-0.144855143 31.4334813,0.434530578 L39.9296888,8.93061299 L48.4258203,0.434532312 C49.005174,-0.144817966 49.9439356,-0.144839626 50.5232191,0.434440473 C51.1026666,1.01361608 51.1026883,1.95237781 50.523311,2.53201994 L42.0271934,11.0280867 L50.5236198,19.5243881 C51.1026114,20.1039128 51.1025681,21.0424621 50.5234362,21.6218589 C50.2438866,21.9014068 49.8678988,22.056338 49.4747743,22.056338 C49.081727,22.056338 48.7058122,21.9014649 48.4259438,21.6218572 L39.9296888,13.1255788 L31.4333579,21.6218589 Z M87.9930745,21.2361923 C87.6275745,21.9685373 86.737774,22.2650783 86.0028977,21.8996518 C85.2706185,21.5328392 84.9738702,20.6424535 85.3398677,19.9096494 L94.8844541,0.819864411 C95.1354887,0.317523695 95.6493371,1.16788749e-05 96.2111321,1.16788749e-05 C96.7729313,1.16788749e-05 97.2865914,0.317358965 97.5379242,0.819758921 L107.082764,19.9097176 C107.449041,20.6425434 107.152155,21.5329694 106.418742,21.9002139 C106.211765,22.0033124 105.986111,22.0563497 105.756604,22.0563497 C105.1957,22.0563497 104.681333,21.7404814 104.429312,21.2364373 L96.2111321,4.79998143 L87.9930745,21.2361923 Z" id="Combined-Shape" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                    <text id="Freelancer" font-family="Gilroy-ExtraBold, Gilroy" font-size="16" font-weight="600" line-spacing="16" letter-spacing="2.28571429" fill="#666666">
+                        <tspan x="174" y="378">FREELANCER</tspan>
+                    </text>
+                    <rect id="Rectangle" fill="#FEF5F5" x="111" y="348" width="47" height="47"></rect>
+                    <g id="atoms/icons/48/value-pyramid/a-ic-48-value-value" transform="translate(110.000000, 347.000000)" stroke="#666666">
+                        <g id="armchair" transform="translate(2.000000, 5.000000)">
+                            <rect id="Rectangle" stroke-width="2" x="11" y="27" width="22" height="10"></rect>
+                            <path d="M15,20 L29,20 C31.209139,20 33,21.790861 33,24 L33,27 L33,27 L11,27 L11,24 C11,21.790861 12.790861,20 15,20 Z" id="Rectangle" stroke-width="2"></path>
+                            <path d="M6,14 L6,12 C6,5.372583 11.372583,1.21743675e-15 18,0 L27,0 C33.627417,-1.21743675e-15 39,5.372583 39,12 L39,14 L39,14" id="Path-79" stroke-width="2"></path>
+                            <path d="M38.5,14 L39,14 C41.7614237,14 44,16.2385763 44,19 L44,20 C44,22.209139 42.209139,24 40,24 L40,24 L40,24 L40,36 C40,36.5522847 39.5522847,37 39,37 L33,37 L33,37 L33,19.5 C33,16.4624339 35.4624339,14 38.5,14 Z" id="Rectangle" stroke-width="2" stroke-linejoin="round"></path>
+                            <path d="M5.5,14 L6,14 C8.76142375,14 11,16.2385763 11,19 L11,20 C11,22.209139 9.209139,24 7,24 L7,24 L7,24 L7,36 C7,36.5522847 6.55228475,37 6,37 L0,37 L0,37 L0,19.5 C-3.71994563e-16,16.4624339 2.46243388,14 5.5,14 Z" id="Rectangle" stroke-width="2" stroke-linejoin="round" transform="translate(5.500000, 25.500000) scale(-1, 1) translate(-5.500000, -25.500000) "></path>
+                            <line x1="22" y1="20" x2="22" y2="6" id="Path-2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                            <line x1="27" y1="20" x2="30" y2="9" id="Path-3" stroke-width="2" stroke-linecap="round"></line>
+                            <line x1="14" y1="20" x2="17" y2="9" id="Path-3" stroke-width="2" stroke-linecap="round" transform="translate(15.500000, 14.500000) scale(-1, 1) translate(-15.500000, -14.500000) "></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

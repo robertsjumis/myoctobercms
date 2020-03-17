@@ -1,0 +1,26 @@
+[viewBag]
+==
+<div class="container faq">
+    <h2>{{ section.title }}</h2>
+    <h2 class="pt14">{{ section.desc }}</h2>
+
+	{% for item in section.items %}
+
+	<div class="question">
+		<h3>{{item.title}}</h3>
+		<div class="pt22">
+		{{item.desc|raw}}
+		</div>
+	</div>
+
+	{% endfor %}
+
+</div>
+
+<div class="container main-find-answer">
+	<h3>{{ 'qa.didnt_find_an_answer'|_ }}</h3>
+	<h3>{{ 'qa.send_your_question_to'|_ }} <a href="mailto:{{this.theme.contact_email}}">{{this.theme.contact_email}}</a></h3>
+	<a href="{{'/contacts'|app}}" class="uxda-btn-href">
+		{{ 'qa.get_more_financial_uxui_insights'|_ }} <span class="btn-arrow-right-green"></span>
+	</a>
+</div>

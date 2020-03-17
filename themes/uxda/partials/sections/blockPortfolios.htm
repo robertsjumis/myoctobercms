@@ -1,0 +1,32 @@
+[viewBag]
+
+[builderList portfolios]
+modelClass = "Cubecamp\Uxda\Models\Portfolio"
+scope = "scopeActive"
+scopeValue = "{{ :scope }}"
+displayColumn = "*"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "sort_order"
+==
+{% set records = portfolios.records %}
+
+{% for item in records %}
+
+	{% set type = 'desktop' %}
+	{% set position = 'left' %}
+
+	{% if loop.index0 % 2 == 1 %}
+		{% set position = 'right' %}
+	{% endif %}
+
+
+	{% if item.type %}
+		{% set type = item.type %}
+	{% endif %}
+
+	{% partial 'sections/blockPortfolios' ~ position|capitalize section=item type=type position=position %}
+
+{% endfor %}

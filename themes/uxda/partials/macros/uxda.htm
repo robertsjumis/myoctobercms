@@ -1,0 +1,147 @@
+[viewBag]
+==
+{% macro pagination(total, current, url, search, nearbyPagesLimit = 1, class) %}
+	{% spaceless %}
+
+		{% set url = url ~ '?' %}
+		{% if search %}
+		{% set url = url ~ 'search=' ~ search ~ '&' %}
+		{% endif %}
+		{% set url = url ~ 'page=' %}
+
+		{% if total > 1 %}
+		<ul class="pagination {{class}}">
+
+			{% if current > 1 %}
+			<li class="page-item">
+				<a class="page-link" href="{{ url ~ (current - 1) }}"><div class="green-arrow-left"></div></a>
+			</li>
+			{% elseif current == 1 %}
+			<li class="page-item no-animation">
+				<div class="green-arrow-left"></div>
+			</li>
+			{% endif %}
+
+			{% for i in 1..total %}
+
+				{% if 0 == (current - nearbyPagesLimit) - loop.index %}
+					<li class="page-item"><a class="page-link" href="{{ (url ~ 1)|e }}">1</a></li>
+					{% if 1 != loop.index %}
+						<li class="page-item no-animation"><span class="gray">…</span></li>
+					{% endif %}
+				{% elseif 0 == (current + nearbyPagesLimit) - loop.index  and (current + nearbyPagesLimit) < total %}
+					<li class="page-item no-animation"><span class="gray">…</span></li>
+				{% elseif 0 < (current - nearbyPagesLimit) - loop.index %}
+				{% elseif 0 > (current + nearbyPagesLimit) - loop.index %}
+				{% else %}
+					<li class="page-item {{ current == loop.index ? 'active' }}">
+					{% if current == loop.index  %}
+						<span class="green">{{ loop.index }}</span>
+					{% else %}
+						<a class="page-link" href="{{ url ~ loop.index }}">{{ loop.index }}</a>
+					{% endif %}
+					</li>
+				{% endif %}
+			{% endfor %}
+
+			{% if current != total  and (current + nearbyPagesLimit) < total %}
+				<li class="page-item"><a class="page-link" href="{{ (url ~ total)|e }}">{{ total }}</a></li>
+			{% endif %}
+
+			{% if total > current %}
+			<li class="page-item">
+				<a class="page-link" href="{{ url ~ (current + 1) }}"><div class="green-arrow-right"></div></a>
+			</li>
+			{% elseif total == current %}
+			<li class="page-item no-animation">
+				<div class="green-arrow-right"></div>
+			</li>
+			{% endif %}
+
+		</ul>
+		{% endif %}
+	{% endspaceless %}
+{% endmacro %}
+
+{% macro pagination_mobile(total, current, url, search, nearbyPagesLimit = 1, class) %}
+	{% spaceless %}
+
+		{% set url = url ~ '?' %}
+		{% if search %}
+		{% set url = url ~ 'search=' ~ search ~ '&' %}
+		{% endif %}
+		{% set url = url ~ 'page=' %}
+
+		{% if total > 1 %}
+		<ul class="pagination {{class}}">
+
+			{% if current > 1 %}
+			<li class="page-item">
+				<a class="page-link" href="{{ url ~ (current - 1) }}"><div class="green-arrow-left"></div></a>
+			</li>
+			{% elseif current == 1 %}
+			<li class="page-item no-animation">
+				<div class="green-arrow-left"></div>
+			</li>
+			{% endif %}
+
+			{% for i in 1..total %}
+
+				{% if 0 == (current - nearbyPagesLimit) - loop.index %}
+					{% if current < 3 %}
+						<li class="page-item"><a class="page-link" href="{{ (url ~ 1)|e }}">1</a></li>
+					{% endif %}
+					{% if 1 != loop.index %}
+
+						<li class="page-item no-animation"><span class="gray">…</span></li>
+
+						{% if current == total  %}
+						<li class="page-item">
+							<a class="page-link" href="{{ url ~ loop.index }}">{{ loop.index }}</a>
+						</li>
+						{% endif %}
+
+					{% endif %}
+				{% elseif 0 == (current + nearbyPagesLimit) - loop.index  and (current + nearbyPagesLimit) < total %}
+
+					{% if current == 1 %}
+						<li class="page-item">
+							<a class="page-link" href="{{ url ~ loop.index }}">{{ loop.index }}</a>
+						</li>
+					{% endif %}
+
+					<li class="page-item no-animation"><span class="gray">…</span></li>
+				{% elseif 0 < (current - nearbyPagesLimit) - loop.index %}
+				{% elseif 0 > (current + nearbyPagesLimit) - loop.index %}
+				{% else %}
+					<li class="page-item {{ current == loop.index ? 'active' }}">
+						{% if current == loop.index  %}
+							<span class="green">{{ loop.index }}</span>
+						{% else %}
+						<a class="page-link" href="{{ url ~ loop.index }}">{{ loop.index }}</a>
+						{% endif %}
+					</li>
+				{% endif %}
+
+			{% endfor %}
+
+			{#
+			{% if current != total  and (current + nearbyPagesLimit) < total %}
+				<li class="page-item"><a class="page-link" href="{{ (url ~ total)|e }}">{{ total }}</a></li>
+			{% endif %}
+			#}
+
+			{% if total > current %}
+			<li class="page-item">
+				<a class="page-link" href="{{ url ~ (current + 1) }}"><div class="green-arrow-right"></div></a>
+			</li>
+			{% elseif total == current %}
+			<li class="page-item no-animation">
+				<div class="green-arrow-right"></div>
+			</li>
+			{% endif %}
+
+		</ul>
+		{% endif %}
+	{% endspaceless %}
+{% endmacro %}

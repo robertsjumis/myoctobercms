@@ -1,0 +1,42 @@
+[viewBag]
+
+[builderList ourvalues]
+modelClass = "Cubecamp\Uxda\Models\OurValue"
+scope = "scopeActive"
+scopeValue = "{{ :scope }}"
+displayColumn = "*"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = ourvalues.records %}
+<div class="container team-values">
+    <div class="container d-none-desktop-mobile">
+        <h2>{{ 'team.the_values_we_live_by'|_ }}</h2>
+        <p class="p2left">
+			{{ 'team.the_values_we_live_by_desc'|_ }}
+		</p>
+    </div>
+    <ul class="nav nav-tabs padding-screen-fix" id="ourValuesTab" role="tablist">
+		{% for item in records %}
+		<li class="nav-item team-values-nav" role="presentation">
+			<a href="#ourvalue{{item.id}}" data-index="{{loop.index0}}" data-toggle="tab" id="ourvalue{{item.id}}-tab" role="tab" aria-controls="ourvalue{{item.id}}" aria-selected="{{ loop.first ? 'true' : 'false' }}" {% if loop.first %} class="active" {% endif %}>{{item.name}}</a>
+		</li>
+		{% endfor %}
+    </ul>
+    <div class="tab-content owl-carousel owl-theme" id="ourValuesTabContent" >
+		{% for item in records %}
+		<div class="team-value-img tab-pane {% if loop.first %} active {% endif %}"
+			 id="ourvalue{{item.id}}"
+			 aria-labelledby="ourvalue{{item.id}}-tab"
+			 role="tabpanel" {% if item.image %} style="background-image: url({{ item.image|media }})" {% endif %} >
+			<div class="team-value-text">
+				<h2>{{item.name}}</h2>
+				<p>{{item.description}}</p>
+			</div>
+		</div>
+		{% endfor %}
+    </div>
+
+</div>

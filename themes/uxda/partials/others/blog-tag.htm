@@ -1,0 +1,28 @@
+[viewBag]
+==
+<div class="container blog-tag">
+    <div class="row">
+        <div class="col-xl-4 blog-tag-column">
+            {% partial "others/small-blog" small_post=posts.shift() %}
+            {% partial "others/small-blog" small_post=posts.shift() %}
+            {% partial "others/small-blog" small_post=posts.shift() %}
+            {% partial "others/small-blog" small_post=posts.shift() %}
+        </div>
+        <div class="col-xl-7 offset-xl-1 pt20">
+                {{tag.description|raw}}
+        </div>
+    </div>
+</div>
+<div class="container blog-small-blogs">
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-xl-4 col-12 mrt-56">
+            {% partial 'others/small-blog' small_post=post %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% import 'macros/uxda' as uxda %}
+
+{{ uxda.pagination(posts.lastPage, posts.currentPage, ''|page, search_query) }}

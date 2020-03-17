@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>atoms/buttons/a-button-play-white</title>
+    <desc>Created with Sketch.</desc>
+    <g id="atoms/buttons/a-button-play-white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke="#FFFFFF" cx="32" cy="32" r="32"></circle>
+        <path d="M35.8944272,25.7888544 L42.2763932,38.5527864 C42.5233825,39.0467649 42.3231581,39.6474379 41.8291796,39.8944272 C41.6903242,39.9638549 41.5372111,40 41.381966,40 L28.618034,40 C28.0657492,40 27.618034,39.5522847 27.618034,39 C27.618034,38.8447549 27.6541791,38.6916418 27.7236068,38.5527864 L34.1055728,25.7888544 C34.3525621,25.2948759 34.9532351,25.0946515 35.4472136,25.3416408 C35.640741,25.4384045 35.7976635,25.595327 35.8944272,25.7888544 Z" id="Triangle" fill="#FFFFFF" transform="translate(35.000000, 32.000000) rotate(-270.000000) translate(-35.000000, -32.000000) "></path>
+    </g>
+</svg>

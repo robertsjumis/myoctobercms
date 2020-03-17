@@ -1,0 +1,30 @@
+[viewBag]
+==
+<div class="container team-love">
+    {# 
+    <div class="scrollbars">
+        <div class="horizontal-img-scroll scrollbar-content">
+            
+        	{% for item in section.items %}
+                <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.image|media|uxda_resize(800) }}" alt="{{ item.image_alt }}" />
+            {% endfor %}    
+            
+        </div>
+    </div>
+    #}
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            {% for item in section.items %}
+            <div class="swiper-slide gallery-animation delay-{{(((loop.index + 1) * 250) + 500)}} ">
+                <img src="{{ item.image|media|uxda_resize(800) }}" alt="{{ item.image_alt }}" />
+
+            </div>
+            {% endfor %}
+
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- Add Scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+</div>

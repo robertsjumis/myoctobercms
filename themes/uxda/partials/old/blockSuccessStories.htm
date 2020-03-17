@@ -1,0 +1,274 @@
+[viewBag]
+
+[builderList stories]
+modelClass = "Cubecamp\Uxda\Models\SuccessStory"
+scope = "scopeActive"
+scopeValue = "{{ :scope }}"
+displayColumn = "*"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "sort_order"
+==
+{#
+<script>
+	/**
+	 * Success Story / Carousel
+	 */
+	(function($) {
+
+		var count = 0;
+
+		function successStory(story) {
+
+			var content = $(".success-stories .success-content");
+
+//		$(".success-stories-text", content).addClass("fadeIn animated");
+
+			$("h3", content).empty().text(story.data("name"));
+			$(".quote", content).empty().text(story.data("desc"));
+			$(".success-stories-images", content).empty();
+			if(story.data("image")) {
+				$(".success-stories-images", content).html('<img src="' + story.data("image") + '" alt="' + story.data("name") + '" height="715" />');
+			}
+			$(".success-stories-images").removeClass("desktop mobile");
+			$(".success-stories-images").addClass(story.data("type"));
+
+			$(".uxda-btn-href", content).addClass("d-none").attr('href', '');
+			if(story.data("url")) {
+				$(".uxda-btn-href", content).removeClass("d-none").attr('href', story.data("url"));
+			}
+
+			$(".success-stories .carousel-indicators li.active").removeClass("active");
+			$(".success-stories .carousel-indicators li:eq(" + story.data("index") + ")").addClass("active");
+
+//		$(".success-stories-text", content).removeClass("fadeIn animated");
+
+
+			var el = $(".success-stories-text", content), newone = el.clone(true);
+			el.before(newone).remove();
+
+			var el = $(".success-stories-images", content), newone = el.clone(true);
+			el.before(newone).remove();
+
+
+			/*
+			 $(".success-stories .success-comp-logos").scrollLeft(function () {
+			 return (($(".success-stories .success-comp-logos").width() / 2) +
+			 ($(".success-stories .carousel-indicators li.active").offset().left - $(".success-stories .carousel-indicators li.active").width()));
+			 });
+			 */
+
+		}
+
+
+		$(".success-stories-controls a").click(function (event) {
+
+			event.preventDefault();
+
+			var action = 'next', story;
+
+			if($(this).data('slide')) {
+				action = $(this).data('slide');
+			}
+
+//		console.log(action);
+
+			if(action === 'next') {
+				story = $(".success-stories .success-comp-logos a.active").next();
+
+				if(!story.length) {
+					story = $(".success-stories .success-comp-logos a:first");
+				}
+
+			}
+			else {
+				story = $(".success-stories .success-comp-logos a.active").prev();
+
+				if(!story.length) {
+					story = $(".success-stories .success-comp-logos a:last");
+				}
+
+			}
+
+			if(story.length) {
+				$(".success-stories .success-comp-logos a.active").removeClass("active");
+				story.addClass("active");
+				successStory(story);
+			}
+/*
+			if(window._viewport !== 'desktop') {
+				return;
+			}
+*/
+			if(action === 'next') {
+				$(".success-stories .success-comp-logos a:first").appendTo(".success-stories .success-comp-logos");
+			}
+			else {
+				$(".success-stories .success-comp-logos a:last").prependTo(".success-stories .success-comp-logos");
+			}
+
+		});
+
+		$(".success-stories .success-comp-logos a").click(function (event) {
+
+			event.preventDefault();
+
+			var story = $(this);
+
+			if(story.hasClass("active")) {
+				return;
+			}
+
+			$(".success-stories .success-comp-logos a.active").removeClass("active");
+			story.addClass("active");
+			successStory(story);
+
+			var _index = $(".success-stories .success-comp-logos a.active").index();
+			var prev = null, stop = false;
+/*
+			if(window._viewport !== 'desktop') {
+				return;
+			}
+*/
+//			$(".success-stories .success-comp-logos").animate({scrollLeft: 0}, 800);
+
+			console.log(_index, count);
+
+			if(_index < count) {
+				for(var i = 0; i < count - _index; i++) {
+					$(".success-stories .success-comp-logos a:last").prependTo(".success-stories .success-comp-logos");
+				}
+			}
+			else {
+				for(var i = 0; i < _index - count; i++) {
+					$(".success-stories .success-comp-logos a:first").appendTo(".success-stories .success-comp-logos");
+				}
+			}
+
+/*
+			$(".success-stories .success-comp-logos a").each(function (index, value) {
+				if(stop) {
+					return;
+				}
+				var $this = $(value);
+				if($(value).hasClass("active")) {
+					for(var i = 0; i < count - index; i++) {
+						$(".success-stories .success-comp-logos a:last").prependTo(".success-stories .success-comp-logos");
+					}
+					stop = true;
+					return;
+				}
+				if(prev) {
+					prev.appendTo(".success-stories .success-comp-logos");
+				}
+				prev = $this;
+			});
+*/
+
+		});
+
+		successStory($(".success-stories .success-comp-logos a.active"));
+/*
+		if(window._viewport !== 'desktop') {
+			return;
+		}
+*/
+
+
+		$(".success-stories .success-comp-logos").hammer().on("swipeleft", function () {
+
+			$(".success-stories-controls a.next").trigger("click");
+
+		}).on('swiperight', function () {
+
+			$(".success-stories-controls a.previous").trigger("click");
+
+
+		});
+
+		if($(".success-stories h2").length) {
+
+			setTimeout(function () {
+
+				var left = $(".success-stories h2").offset().left;
+
+				if(!left) {
+					return;
+				}
+
+//				console.log(left);
+				count = parseInt(left / 196);
+//				console.log(count);
+				left = left - (count * 196);
+				left = parseInt(left);
+
+				$(".success-stories .success-comp-logos").css("margin-left", left);
+
+				for(var i = 0; i < count; i++) {
+					$(".success-stories .success-comp-logos a:last").prependTo(".success-stories .success-comp-logos");
+				}
+
+				setTimeout(function () {
+					successStory($(".success-stories .success-comp-logos a:eq(" + count + ")"));
+				}, 50);
+
+			}, 100);
+
+		}
+
+	})(jQuery);
+
+</script>
+#}
+
+<div class="container success-stories">
+    <h2>Success stories</h2>
+
+	{% set records = stories.records %}
+
+    <div class="success-comp-logos">
+		{% for item in records %}
+		<a href="#" class="{% if loop.first %}active{% endif %}  animated"
+		   data-index="{{loop.index0}}"
+		   data-url="{{item.url}}"
+		   data-type="{{ item.type }}"
+		   data-image="{{ item.image|media }}"
+		   data-image-alt="{{item.image_alt|e}}"
+		   data-name="{{item.name|e}}"
+		   data-desc="{{item.description|e}}"
+		   data-id="{{item.id}}">
+			<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.logo|media }}" alt="{{ item.logo_alt|default(item.name) }}" />
+		</a>
+		{% endfor %}
+    </div>
+
+    <ol class="carousel-indicators">
+		{% for item in records %}
+		<li {% if loop.first %}class="active"{% endif %}></li>
+		{% endfor %}
+    </ol>
+
+    <div class="success-content">
+        <div>
+            <div class="success-stories-controls">
+                <a href="#" role="button" data-slide="prev" class="previous" title="Prev"><span class="btn-arrow-left-green"></span></a>
+                <a href="#" role="button" data-slide="next" class="next" title="Next"><span class="btn-arrow-right-green"></span></a>
+            </div>
+            <div class="success-stories-text animated fadeIn slow">
+                <h3></h3>
+                <div class="quote-img" aria-hidden="true"></div>
+                <p class="quote"></p>
+            </div>
+{#            <a href="#" class="uxda-play-link"><span></span>View project</a> #}
+            <div class="uxda-btn-href-container">
+                <a href="#" class="uxda-btn-href d-none">read testimonial <span class="btn-arrow-right-green"></span></a>
+            </div>
+        </div>
+        <div class="success-stories-images animated fadeIn "></div>
+    </div>
+	<a href="{{'/contacts'|app}}" class="success-stories-link">
+		<h2 class="green">Let's create your success story</h2>
+	</a>
+</div>

@@ -1,0 +1,34 @@
+[viewBag]
+==
+{% if post %}
+{% set featured_image=post.filename %}
+{# add cursor:pointer to the main blogs classes #}
+<div class="small-blog-most-read">
+    <div class="small-blog-header">
+        <a href="{{('/blog/' ~ post.slug)|app}}">
+			<img class="sbh-img lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ featured_image ? featured_image|media|uxda_resize(1120) : 'assets/img/main/img.png'|theme }}" alt="{{post.title}}" />
+		</a>
+        <div class="sbh-badge">
+            <h4><span class="view-counter" data-views="{{post.view_counter}}">{{post.view_counter}}</span> {{ 'blog.reads'|_ }}</h4>
+        </div>
+        <div class="blog-author-avatar">
+            {% for author in post.authors %}
+            <a href="#" class="void">
+				<img class="avatar" src="{{ author.image ? author.image|media|uxda_resize(128) : 'assets/img/avatar.png'|theme }}" alt="{{author.name}}" />
+			</a>
+            {% endfor %}
+        </div>
+    </div>
+	<a href="{{('/blog/' ~ post.slug)|app}}"><h4>{{post.title}}</h4></a>
+    <p class="p4left">
+        {{post.excerpt}}
+    </p>
+    <div class="d-flex align-items-center">
+        {% for author in post.authors %}
+        {% if not loop.first %}<span class="author"> & </span>{% endif %}
+        <a href="#" class="author void popover-team" data-team="{{author|uxda_team_json()}}" data-image="{{ author.image ? author.image|media|uxda_resize(128) : 'assets/img/avatar.png'|theme }}">{{author.name}}</a>
+        {% endfor %}
+        <p class="pt14 gray"> • <span class="reading-time" data-seconds="{{post.reading_time}}">0</span></p>
+    </div>
+</div>
+{% endif %}

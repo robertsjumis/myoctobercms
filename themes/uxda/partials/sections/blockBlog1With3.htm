@@ -1,0 +1,79 @@
+[viewBag]
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+{% set posts=blogPosts.posts %}
+{% set header_post=posts.shift() %}
+{% if header_post %}
+{% set featured_image=header_post.filename %}
+<div class="big-blog">
+    <h2 class="container">{{ 'blog.our_blog'|_ }}</h2>
+    <div class="blog-img d-none-desktop blog-title-img-mobile" onclick="window.location.href = '/blog/{{header_post.slug}}'">
+        <img class="blog-img-header lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ featured_image ? featured_image|media|uxda_resize(1500) : 'assets/img/main/blog-img.png'|theme }}" alt="{{header_post.title}}" />
+        <div class="blog-author-avatar blog-author-avatar-abs">
+            {% for author in header_post.authors %}
+            <a href="#" class="void">
+				<img class="avatar lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ author.image ? author.image|media|uxda_resize(128) : 'assets/img/avatar.png'|theme }}" alt="{{author.name}}"/>
+			</a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container blog">
+        <div class="row">
+            <div class="col-xl-8 col-12 blog-img d-none-tablet">
+                <a href="{{('/blog/' ~ header_post.slug)|app}}">
+					<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ featured_image ? featured_image|media|uxda_resize(1500) : 'assets/img/main/blog-img.png'|theme }}" alt="{{header_post.title}}" />
+				</a>
+            </div>
+            <div class="col-xl-4 col-12">
+                <div class="blog-title">
+					<a href="{{('/blog/' ~ header_post.slug)|app}}"><h3>{{header_post.title}}</h3></a>
+                </div>
+                <div class="blog-text">
+                    <p class="p4left">
+                        {{header_post.excerpt}}
+                    </p>
+                    <div class="blog-authors">
+                        <div class="blog-author-avatar">
+                            {% for author in header_post.authors %}
+                            <a href="#" class="void">
+								<img class="avatar lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ author.image ? author.image|media|uxda_resize(128) : 'assets/img/avatar.png'|theme }}" alt="{{author.name}}"/>
+							</a>
+                            {% endfor %}
+                        </div>
+                        <div>
+                            {% for author in header_post.authors %}
+                            {% if not loop.first %}<span class="author"> & </span>{% endif %}
+                            <a href="#" class="author void popover-team" data-team="{{author|uxda_team_json()}}" data-image="{{ author.image ? author.image|media|uxda_resize(128) : 'assets/img/avatar.png'|theme }}">{{author.name}}</a>
+                            {% endfor %}
+                            <p class="pt14 gray">• <span class="reading-time" data-seconds="{{header_post.reading_time}}">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row underblogs">
+            <div class="col-xl-4">
+                {% partial 'others/small-blog' small_post=posts.shift() %}
+            </div>
+            <div class="col-xl-4">
+                {% partial 'others/small-blog' small_post=posts.shift() %}
+            </div>
+            <div class="col-xl-4">
+                {% partial 'others/small-blog' small_post=posts.shift() %}
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="{{'/blog'|app}}" class="uxda-btn-href">
+                {{ 'blog.show_all_blog_posts'|_ }} <span class="btn-arrow-right-green"></span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %}

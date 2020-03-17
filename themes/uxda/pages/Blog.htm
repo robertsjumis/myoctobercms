@@ -1,0 +1,47 @@
+title = "Blog"
+url = "/blog"
+layout = "default"
+is_hidden = 0
+meta_title = "How to Design a Financial Product | UXDA Blog, Insights, Trends"
+meta_description = "In our blog, explore the best ideas, tips, case studies, and banking trends in over 70 UX design articles already read by 300K financial experts"
+enabled_in_sitemap = 1
+use_updated_at = 1
+changefreq = "always"
+priority = 0.1
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 1
+categoryPage = 404
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = 404
+==
+<?php
+function onInit() {
+    $score = get('page');
+}
+?>
+==
+{% set posts=blogPosts.posts %}
+{% partial 'others/blog-header' %}
+<div class="container">
+    {% partial "others/blog-nav" %}
+</div>
+{% if not search_query %}
+<div id="showBlogResults">
+    {% partial "others/blog-header-right" class='mrb-0' %}
+    {% if blogPosts.posts.currentPage == 1 %}
+        {% partial 'others/blog-most-read' %}
+    {% endif %}
+    {% partial 'others/blog-small-blogs' %}
+</div>
+{% endif %}
+<div id="showSearchResults">
+    {% partial 'others/blog-search-results' %}
+</div>

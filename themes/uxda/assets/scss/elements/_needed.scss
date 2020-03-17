@@ -1,0 +1,624 @@
+.overflow-x-disable {
+  overflow-x: hidden;
+}
+
+.mrb-0 {
+  margin-bottom: 0px;
+}
+
+.circle-num-green {
+  background-color: $green;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  max-width: 24px;
+  max-height: 24px;
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-family: "gilroyEB";
+  letter-spacing: -0.29px;
+  line-height: 17px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.dotted-green-line {
+  position: absolute;
+  margin-top: -11px;
+  margin-left: 12px;
+  height: 38px;
+  border-left: 1px dashed $green;
+}
+
+.mrt-56 {
+  margin-top: 56px;
+}
+
+a {
+  &.badge {
+    display: inline-flex;
+    margin-top: 8px;
+    text-decoration: none;
+    span {
+      transition: 0.3s all;
+      text-decoration: none;
+      font-size: 12px;
+      line-height: 15px;
+      color: $gray-6;
+      background: #f0f0f0;
+      padding: 4px 16px;
+      text-transform: uppercase;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+    &:hover {
+      span {
+        transition: 0.3s all;
+        background: #e2e2e2;
+      }
+    }
+    &:active {
+      span {
+        transition: 0.3s all;
+        background: $green;
+        color: white;
+      }
+    }
+  }
+}
+
+.not-found {
+  margin-top: 96px;
+  background-image: url("../img/not-found.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  height: 600px;
+  div {
+    margin-top: 160px;
+  }
+  margin-bottom: 320px;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.half {
+  width: 50%;
+}
+.carousel-inner {
+  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.05);
+  .carousel-item {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.carousel-indicators {
+  margin-bottom: -24px;
+  z-index: 9;
+  li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    margin-left: 4px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid $green;
+    border-radius: 100%;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+    &.active {
+      background-color: $green;
+    }
+  }
+}
+.carousel-control-prev,
+.carousel-control-next {
+  margin-right: 8px;
+  margin-left: 8px;
+  width: 24px;
+}
+
+.b-header {
+  margin-top: 312px;
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+    color: black;
+    span {
+      font-family: "gilroyEB", sans-serif;
+    }
+    margin-top: 80px;
+    margin-bottom: 16px;
+  }
+}
+
+.fr-fic {
+  &.fr-dii {
+    width: 1136px;
+    object-fit: cover;
+    height: 100%;
+    margin-left: -192px;
+  }
+}
+
+.pagination {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  margin-top: -280px;
+  margin-bottom: 320px;
+  li {
+    width: 56px;
+    height: 56px;
+    border: 1px solid #f0f0f0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    margin-left: 16px;
+    &:before {
+      content: "";
+    }
+    a {
+      text-decoration: none;
+      color: $gray;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "gilroyEB", sans-serif;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+    span {
+      color: $gray;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "gilroyEB", sans-serif;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+    &.active {
+      border: 1px solid $green;
+      a {
+        color: $green;
+      }
+      span {
+        color: $green;
+      }
+    }
+
+    text-decoration: none;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    border: none;
+    font-family: "gilroyEB";
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    width: 56px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid #f0f0f0;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      background: rgba(108, 199, 39, 0.3); /* onhover background color */
+      z-index: -1;
+      transform: translate3D(-101%, 0, 0);
+      transition: all 0.5s;
+    }
+    &:active {
+      background: #6cc727;
+      border: 1px solid #f0f0f0;
+    }
+    &:before {
+      background: transparent;
+      z-index: -2;
+      transform: translate3D(0, 0, 0);
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: #000;
+      transition: all 0.5s;
+      a {
+        color: #333333;
+      }
+      &:after {
+        transform: translate3D(0, 0, 0);
+        transition: all 0.5s;
+        color: #000;
+      }
+    }
+    &.no-animation {
+      &:hover {
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          height: 100%;
+          background: white; /* onhover background color */
+          z-index: -1;
+          transform: translate3D(-101%, 0, 0);
+          transition: all 0.5s;
+        }
+        span {
+          color: $gray;
+        }
+      }
+      &:active {
+        background: white;
+      }
+    }
+    &.white {
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      &:hover {
+        color: white;
+      }
+      span.btn-arrow-right-white {
+        background-image: url("../img/icons/btn-arrow-white.svg");
+        width: 18px;
+        height: 14px;
+        margin-left: 16px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.mrt400 {
+  margin-top: 400px;
+}
+
+.green-arrow-left {
+  background-image: url("../img/icons/arrow-green-left.svg");
+  height: 24px;
+  width: 24px;
+}
+
+.green-arrow-right {
+  background-image: url("../img/icons/arrow-green-right.svg");
+  height: 24px;
+  width: 24px;
+}
+
+.uxda-play-link {
+  font-size: 16px;
+  line-height: 24px;
+  color: $gray-6;
+  display: flex;
+  align-items: center;
+  span {
+    height: 24px;
+    width: 24px;
+    display: block;
+    margin-right: 8px;
+    background-image: url("../img/icons/play-green.svg");
+  }
+}
+.background-fa {
+  header {
+    background-color: #fafafa;
+    &.sticky-header {
+      background-color: #fafafa;
+    }
+  }
+}
+
+.uxda-popover {
+  background-color: white;
+  padding: 24px;
+  max-width: 336px;
+  -webkit-box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border: none;
+  .arrow {
+    &:before {
+      border: none;
+    }
+  }
+  .uxda-popover-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    .avatar {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+      max-width: 48px;
+      max-height: 48px;
+      border-radius: 100%;
+      object-fit: cover;
+      margin-right: 8px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      color: $light-black;
+    }
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-6;
+    margin-bottom: 8px;
+  }
+  a {
+    text-decoration: none;
+    img {
+      width: 28px;
+      height: 28px;
+      margin-right: 16px;
+    }
+  }
+}
+
+.cookie {
+  width: 302px;
+  padding: 24px;
+  background-color: white;
+  position: fixed;
+  z-index: 999;
+  bottom: 24px;
+  left: 24px;
+  -webkit-box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.1);
+  .cookie-header {
+    display: flex;
+    img {
+      margin-right: 4px;
+    }
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-6;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+  .cookie-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .cookie-gray-btn {
+      font-family: "gilroyEB";
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: $gray;
+      letter-spacing: 1px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.scrollbars {
+  .horizontal-img-scroll {
+    &.scrollbar-content {
+      margin-bottom: 48px;
+      img {
+        max-height: 619px !important;
+        max-width: 752px;
+      }
+    }
+  }
+  .scrollbar-path-horizontal {
+    width: 1136px !important;
+    z-index: 9 !important;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0px !important;
+    right: 0px !important;
+    border-radius: 0px !important;
+    height: 1px !important;
+    bottom: 10px !important;
+
+    .scrollbar-handle {
+      opacity: 1 !important;
+      background-color: $green;
+      border-radius: 0px !important;
+      height: 5px !important;
+      margin-top: -2px;
+      &:hover {
+        border-radius: 0px !important;
+        height: 17px !important;
+        margin-top: -8px;
+      }
+    }
+  }
+}
+
+// .team-achievements {
+.scrollbars1 {
+  .scrollbar-path-vertical {
+    display: block !important;
+    z-index: 9 !important;
+    top: 0 !important;
+    height: 100% !important;
+    left: 0;
+    width: 1px !important;
+    border-radius: 0px !important;
+    .scrollbar-handle {
+      opacity: 1 !important;
+      background-color: $green;
+      width: 5px !important;
+      border-radius: 0px !important;
+    }
+  }
+}
+// }
+
+@media screen and (max-width: 1136px) {
+  .not-found {
+    div {
+      margin-top: 0px;
+    }
+  }
+  .pagination {
+    margin-top: -200px;
+    margin-bottom: 240px;
+    li {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  .scrollbars1 {
+    .scrollbar-path-vertical {
+      display: none !important;
+    }
+  }
+  .scrollbars {
+    .scrollbar-content {
+      padding-bottom: 48px;
+    }
+  }
+  .mrt400 {
+    margin-top: 320px;
+  }
+}
+@media screen and (max-width: 656px) {
+  .carousel {
+    margin-bottom: 48px;
+  }
+  .b-header {
+    margin-top: calc(80px + 104px);
+  }
+  .mrt-56 {
+    margin-top: 40px;
+  }
+  .not-found {
+    margin-top: 48px;
+    background-image: none;
+    div {
+      margin-top: 0;
+    }
+    margin-bottom: 160px;
+  }
+  .pagination {
+    margin-top: -100px;
+    margin-bottom: 160px;
+  }
+  .cookie {
+    .cookie-buttons {
+      .uxda-btn-href {
+        width: fit-content;
+      }
+    }
+  }
+  .mobile-padding-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+    .article-about-author {
+      padding-left: 32px;
+    }
+  }
+  .mrt400 {
+    margin-top: 240px;
+  }
+
+  .scrollbars {
+    .horizontal-img-scroll {
+      &.scrollbar-content {
+        margin-bottom: 48px;
+        img {
+          max-height: 300px !important;
+          max-width: 98%;
+          height: auto;
+          object-fit: contain;
+        }
+        -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar {
+          -webkit-appearance: none;
+          height: 5px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          width: 1px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: $green;
+          height: 5px;
+        }
+      }
+    }
+    .scrollbar-path-horizontal {
+      width: 100% !important;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0px !important;
+      right: 0px !important;
+      border-radius: 0px !important;
+      height: 1px !important;
+      bottom: 10px !important;
+      display: none !important;
+      .scrollbar-handle {
+        opacity: 1 !important;
+        background-color: $green;
+        border-radius: 0px !important;
+        height: 5px !important;
+        margin-top: -2px;
+        &:hover {
+          border-radius: 0px !important;
+          height: 17px !important;
+          margin-top: -8px;
+        }
+      }
+    }
+  }
+}

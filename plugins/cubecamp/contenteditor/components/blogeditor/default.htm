@@ -1,0 +1,51 @@
+{% set post = __SELF__.post %}
+
+{% block rainlabContent %}
+
+{% if __SELF__.isEditor %}
+<section data-editable data-component="{{ __SELF__ }}::onSave" data-ce-tag="p" data-file="{{post.id}}" data-post="{{post.id}}" data-tools="{{ __SELF__.tools }}">
+	{{ post.content_html|raw }}
+</section>
+{% else %}
+	{{ post.content_html|uxda_content_responsive() }}
+{% endif %}
+
+{% endblock %}
+
+{% if __SELF__.isEditor %}
+
+{% put scripts %}
+<script type="text/javascript">
+	/* CONTENT EDITOR SCRIPT START */
+
+	function ContentToolsSettings() {
+
+		ContentTools.StylePalette.add([
+			{% for style in __SELF__.palettes %}
+			new ContentTools.Style('{{ style.name ? style.name : style.class }}', '{{ style.class }}', {{ style.allowed_tags|json_encode()|raw }}),
+			{% endfor %}
+		]);
+
+		editor.toolbox().tools([[
+			{% for value in __SELF__.buttons %}
+			'{{ value }}',
+			{% endfor %}
+			'blockquote'
+		], [
+			'undo',
+			'redo',
+			'remove'
+		]]);
+
+	}
+	/* CONTENT EDITOR SCRIPT END */
+</script>
+{% endput %}
+
+{% put styles  %}
+<style title="contenteditor" type="text/css">
+	{{ __SELF__.additional_styles }}
+</style>
+{% endput %}
+
+{% endif %}

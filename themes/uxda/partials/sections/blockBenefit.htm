@@ -1,0 +1,39 @@
+[viewBag]
+==
+<?php
+function onStart()
+{
+
+    $this->addJs(['assets/js/lottie.min.js', 'assets/js/other.process.js'], [
+        'defer' => 'defer'
+    ]);
+
+}
+?>
+==
+<div class="container process-benefit">
+    <h2>{{ section.title }}</h2>
+    <h3>{{ section.sub_title }}</h3>
+    <p class="p2left">{{ section.desc }}</p>
+    <div class="row pub-list">
+        <div class="col-xl-4 col-md-5 benefit-list">
+			{% for item in section.items %}
+			<div>
+				<h3>{{ item.title }} <span class="green">{{ item.title_green }}</span></h3>
+				<ol class="process-ol">
+					{% for item in item.items %}
+						<li>{{ item.title }}</li>
+					{% endfor %}
+				</ol>
+			</div>
+			{% endfor %}
+        </div>
+        <div class="col-xl-8 col-md-7 d-flex align-items-center justify-content-center pub-img">
+			{% if section.image %}
+            	<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ section.image|media }}" alt="{{ section.image_alt|default(section.title) }}" />
+			{% else %}
+			<div id="bm"></div>
+			{% endif %}
+        </div>
+    </div>
+</div>

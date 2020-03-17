@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="atoms/icons/56/a-ic-56-product" transform="translate(-34.000000, -32.000000)" fill-rule="nonzero">
+            <g id="Group" transform="translate(34.000000, 32.000000)">
+                <path d="M11,0 C4.92454902,0 0,4.92454902 0,11 C0,17.075451 4.92454902,22 11,22 C17.075451,22 22,17.075451 22,11 C22,4.92454902 17.075451,0 11,0 Z" id="Path" fill="#6CC727"></path>
+                <path d="M7.58130165,11.4325098 C7.13189311,11.0926203 6.50734863,11.2028342 6.18634253,11.6786796 C5.86533642,12.154525 5.96942717,12.8158089 6.41883571,13.1556984 L9.91880426,15.8027393 C10.3423683,16.1230826 10.9271912,16.0458115 11.2634167,15.6250792 L16.7633672,8.74277297 C17.1201081,8.29636901 17.0675271,7.62827933 16.6459242,7.2505529 C16.2243214,6.87282647 15.5933492,6.92850061 15.2366084,7.37490457 L10.3316817,13.5126338 L7.58130165,11.4325098 Z" id="Path-5" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

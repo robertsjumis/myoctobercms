@@ -1,0 +1,16 @@
+[viewBag]
+==
+<div class="blog-nav-wrap blog-nav-category">
+    <div class="blog-nav-items">
+        <a href="{{'/blog'|app}}" {{ (currentCategorySlug) ?  '' : ' class="active"' }}>{{ 'blog.all'|_ }}</a>
+        {% for category in blogCategories.categories %}
+        <a href="{{('/blog/category/' ~ category.slug)|app}}" {{ (currentCategorySlug == category.slug) ? ' class="active"' : '' }}>{{category.name}}</a>
+        {% endfor %}
+    </div>
+    <div class="blog-nav-search">
+        <form onsubmit="return false;">
+            <input name="search" placeholder="{{ 'blog.search_for_articles'|_ }}" value="{{ search_query ? search_query : '' }}" />
+			<span class="blog-nav-search-cross"></span>
+        </form>
+    </div>
+</div>

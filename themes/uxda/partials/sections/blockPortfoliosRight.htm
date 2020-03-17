@@ -1,0 +1,108 @@
+[viewBag]
+==
+<div class="container portfolio-bg scrollme portfolio-{{type}}-{{position}}">
+	<div class="row">
+		<div class="col-xl-6 offset-xl-1 portfolio-content-spacing animateme" data-when="enter" data-from="1" data-to="0" data-translatey="150">
+			{% if section.logo %}
+			<div class="logo">
+				<img class="lazy" data-when="enter" data-from="1" data-to="0" data-translatey="100" {{ section.logo|media|uxda_responsive('lazy-placeholder') }} alt="{{section.image_alt}}" />
+			</div>
+			{% endif %}
+			<h2>{{section.title|raw}}</h2>
+			<p class="p2left">{{section.description}}</p>
+			<div class="cost-term">
+				{% if section.cost %}<p class="p4left bold">{{ 'portfolios.cost'|_ }} {{section.cost}}</p>{% endif %}
+				{% if section.term %}<p class="p4left bold">{{ 'portfolios.term'|_ }} {{section.term}}</p>{% endif %}
+			</div>
+
+			{% if section.deliverables_ui or section.deliverables_ux %}
+			<div class="portfolio-icon-link">
+				<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/icons/info.svg'|theme }}" alt="Info" />
+				<a href="#" data-toggle="modal" data-target="#portfolioModal{{section.id}}">
+					<p class="p4left">{{ 'portfolios.list_of_deliverables'|_ }}</p>
+				</a>
+			</div>
+			{% endif %}
+
+			{% if section.video %}
+			<div class="portfolio-icon-link">
+				<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/icons/play.svg'|theme }}" alt="Play" />
+				<a href="#" class="video-show" data-video="{{section.video}}">
+					<p class="p4left">{{ 'portfolios.play_motion_video'|_ }}</p>
+				</a>
+			</div>
+			{% endif %}
+
+			{% if section.url %}
+			<div class="uxda-btn-href-container">
+    			<a href="{{section.url}}" class="uxda-btn-href">
+					{{ 'portfolios.read_case_study'|_ }} <span class="btn-arrow-right-green"></span>
+    			</a>
+    		</div>
+			{% endif %}
+		</div>
+		<div class="col-xl-5 img-desktop-spacing">
+			<img class="lazy animateme" data-when="enter" data-from="1" data-to="0" data-translatey="100" {{ section.image|media|uxda_responsive('lazy-placeholder') }} alt="{{section.image_alt}}" />
+		</div>
+	</div>
+
+	{% if section.deliverables_ui or section.deliverables_ux %}
+	<div class="modal sizeUp" id="portfolioModal{{section.id}}" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog portfolio" role="document">
+			<div class="modal-content portfolio">
+				<div class="modal-header d-flex justify-content-end">
+					<a href="#" data-dismiss="modal"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/contacts/cross.svg'|theme }}" alt="Close"/></a>
+				</div>
+				<div class="modal-body d-flex justify-content-center">
+					<div class="deliverables-content">
+						<h2 class="fadeInModal delay-400">{{section.title|raw}}</h2>
+						<div class="cost-term fadeInModal delay-450">
+							{% if section.cost %}<p class="p4left bold">{{ 'portfolios.cost'|_ }} {{section.cost}}</p>{% endif %}
+							{% if section.term %}<p class="p4left bold">{{ 'portfolios.term'|_ }} {{section.term}}</p>{% endif %}
+						</div>
+						<div class="ux-ui fadeInModal delay-500">
+							<div class="ux-ui-col">
+								<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/icons/ui.svg'|theme }}" alt="UI"/>
+								<h3>{{ 'portfolios.ux_deliverables'|_ }}</h3>
+
+								{% for item in section.deliverables_ux %}
+
+								{% if not loop.first %}
+								<span class="dotted-green-line"></span>
+								{% endif %}
+
+								<div class="num-name d-flex align-items-center">
+									<div class="circle-num-green">{{loop.index}}</div>
+									<p class="p4left gray ux-ui-li">{{item.title}}</p>
+								</div>
+
+								{% endfor %}
+
+							</div>
+							<div class="ux-ui-col">
+								<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/icons/ux.svg'|theme }}" alt="UX"/>
+								<h3>{{ 'portfolios.ui_deliverables'|_ }}</h3>
+
+								{% for item in section.deliverables_ui %}
+
+								{% if not loop.first %}
+								<span class="dotted-green-line"></span>
+								{% endif %}
+
+								<div class="num-name d-flex align-items-center">
+									<div class="circle-num-green">{{loop.index}}</div>
+									<p class="p4left gray ux-ui-li">{{item.title}}</p>
+								</div>
+
+								{% endfor %}
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+
+</div>

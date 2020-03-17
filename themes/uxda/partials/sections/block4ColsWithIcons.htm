@@ -1,0 +1,28 @@
+[viewBag]
+==
+<div class="container ways-for-coop">
+    <h2 class="animation" data-animation="slideFromBottomHeader delay-700">{{ section.title }}</h2>
+    <div class="row">
+		{% for item in section.items %}
+
+			<div class="col-xl-3 col-md-6 col-12 animation" data-animation="slideFromBottomHeader05 delay-{{(((loop.index + 1) * 100) + 700)}}">
+				<img src="{{ item.image|media }}" alt="{{ item.image_alt|default(item.title) }}"/>
+				<h3>{{item.title}}</h3>
+				{% if item.desc %}
+				<p class="p4left gray">{{item.desc}}</p>
+				{% endif %}
+				{% if item.budget %}
+				<p class="p4left bold">Budget: {{item.budget}}</p>
+				{% endif %}
+				{% if item.term %}
+				<p class="p4left gray">Term: {{item.term}}</p>
+				{% endif %}
+				{% if item.screens %}
+				<p class="p4left gray">Screens: {{item.screens}}</p>
+				{% endif %}
+			</div>
+
+		{% endfor %}
+
+    </div>
+</div>

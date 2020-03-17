@@ -1,0 +1,17 @@
+[viewBag]
+==
+{% if not show_results %}
+<div class="container b-header">
+    <h1>
+		<span class="light-gray portfolio-animation2 delay-600">{{ 'blog.header_light_gray'|_ }} </span>
+		<span class="gray portfolio-animation2 delay-700">{{ 'blog.header_gray'|_ }} </span>
+		<span class="green portfolio-animation2 delay-800">{{ 'blog.header_green'|_ }}</span>
+	</h1>
+    <h2 class="slideFromBottomHeader2 delay-900">{{ 'blog.header_title'|_ }}</h2>
+    <p class="p2left slideFromBottomHeader2 delay-900">{{ 'blog.header_desc'|_ }}</p>
+</div>
+{% else %}
+<div class="container b-header">
+    <h1 class="light-gray">{{ 'blog.h1_search'|_ }} <span class="gray">{{ 'blog.h1_result'|_ }}</span></h1>
+</div>
+{% endif %}

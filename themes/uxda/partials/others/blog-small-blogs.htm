@@ -1,0 +1,17 @@
+[viewBag]
+==
+<div class="container blog-small-blogs">
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-xl-4 col-12">
+            {% partial 'others/small-blog' small_post=post %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% import 'macros/uxda' as uxda %}
+
+{{ uxda.pagination(posts.lastPage, posts.currentPage, ''|page, search_query, 2, 'd-none d-xl-flex') }}
+
+{{ uxda.pagination_mobile(posts.lastPage, posts.currentPage, ''|page, search_query, 1, 'd-xl-none') }}

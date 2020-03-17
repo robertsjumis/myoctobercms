@@ -1,0 +1,18 @@
+[viewBag]
+==
+<div class="container process-benefit">
+	<h2>{{ section.title }}</h2>
+	<h3>{{ section.sub_title }}</h3>
+	<p class="p2left">{{ section.desc }}</p>
+	{% for item in section.items %}
+
+	{% set position = 'left' %}
+
+	{% if loop.index0 % 2 == 1 %}
+	{% set position = 'right' %}
+	{% endif %}
+
+	{% partial 'sections/blockBenefitWithCarousel' ~ position|capitalize section=item id=loop.index0 position=position %}
+
+	{% endfor %}
+</div>

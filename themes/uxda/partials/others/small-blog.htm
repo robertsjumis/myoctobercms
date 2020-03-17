@@ -1,0 +1,52 @@
+[viewBag]
+==
+{% if small_post %}
+{% set featured_image=small_post.filename %}
+{# add cursor:pointer to the main blogs classes #}
+<div class="small-blog">
+    <div class="small-blog-header">
+        <a href="{{('/blog/' ~small_post.slug)|app}}"><img class="lazy"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-src="{{ featured_image ? featured_image|media|uxda_resize(740) : 'assets/img/main/img.png'|theme }}"
+                alt="{{small_post.title}}" /></a>
+        <div class="blog-author-avatar d-none-tablet-mobile">
+            {% for author in small_post.authors %}
+            <a href="#" class="void">
+                <img class="avatar lazy"
+                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-src="{{ author.image ? author.image|media|uxda_resize(128) : 'assets/img/avatar.png'|theme }}"
+                    alt="{{author.name}}" />
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="small-blog-texts">
+        <a href="{{('/blog/' ~small_post.slug)|app}}">
+            <h4>{{small_post.title}}</h4>
+        </a>
+        <p class="p4left">
+            {{small_post.excerpt}}
+        </p>
+        <div class="small-blog-author-links">
+            <div class="blog-author-avatar d-none-desktop d-none-mobile">
+                {% for author in small_post.authors %}
+                <a href="#" class="void">
+                    <img class="avatar lazy"
+                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        data-src="{{ author.image ? author.image|media|uxda_resize(128) : 'assets/img/avatar.png'|theme }}"
+                        alt="{{author.name}}" />
+                </a>
+                {% endfor %}
+            </div>
+            <div>
+                {% for author in small_post.authors %}
+                {% if not loop.first %}<span class="author"> & </span>{% endif %}
+                <a href="#" class="author void popover-team" data-team="{{author|uxda_team_json()}}"
+                    data-image="{{ author.image ? author.image|media|uxda_resize(128) : 'assets/img/avatar.png'|theme }}">{{author.name}}</a>
+                {% endfor %}
+            </div>
+            <p class="pt14 gray"> • <span class="reading-time" data-seconds="{{small_post.reading_time}}">0</span></p>
+        </div>
+    </div>
+</div>
+{% endif %}

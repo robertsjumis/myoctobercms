@@ -1,0 +1,50 @@
+[viewBag]
+==
+<div class="container pyramid-container">
+    <h2>{{ section.title }}</h2>
+    <p class="p2left">{{ section.desc|raw }}</p>
+
+	{% for item in section.items %}
+	<div>
+		<h3>{{ item.title }}</h3>
+		<p class="p3grayleft">{{ item.desc }}</p>
+		<div class="pyramid-btn-top">
+			{% if item.url %}
+			<a href="{{ item.url }}" class="uxda-btn-href">
+				{{ 'pyramid.read_more'|_ }} <span class="btn-arrow-right-green"></span>
+			</a>
+			{% endif %}
+		</div>
+		<div class="pyramid row animation opacity {{ item.items|length == 3 ? 'pyramid-three' : '' }}" data-animation="animated fadeIn slower">
+
+			{% for item in item.items %}
+			{% if not loop.first %} <div class="white-line"></div> {% endif %}
+			<div class="pyramid-item col-xl-5 offset-xl-3 animation opacity" data-animation="animated fadeIn delay-400">
+				<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.image|media }}" alt="{{ item.image_alt|default(item.title) }}" />
+				<div class="pyramid-text">
+					<h4>{{ item.title }}</h4>
+					<p>{{ item.desc|nl2br }}</p>
+				</div>
+			</div>
+			{% endfor %}
+			
+		</div>
+		<div class="pyramid-tablet-text">
+			{% for item in item.items %}
+
+			<div class="pyramid-tablet-text-row">
+				<h4>{{ item.title }}</h4>
+				<p>{{ item.desc|nl2br }}</p>
+			</div>
+
+			{% endfor %}
+		</div>
+		{% if item.url %}
+		<a href="{{ item.url }}" class="uxda-btn-href pyramid-btn-bottom">
+			{{ 'pyramid.read_more'|_ }} <span class="btn-arrow-right-green"></span>
+		</a>
+		{% endif %}
+	</div>
+	{% endfor %}
+
+</div>

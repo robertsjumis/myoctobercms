@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table cubecamp_blog_posts'
+    - builder_table_create_cubecamp_blog_posts.php
+1.0.3:
+    - 'Created table cubecamp_blog_'
+    - builder_table_create_cubecamp_blog_.php
+1.0.4:
+    - 'Drop table cubecamp_blog_'
+    - builder_table_delete_cubecamp_blog_.php
+1.0.5:
+    - 'Created table cubecamp_blog_comments'
+    - builder_table_create_cubecamp_blog_comments.php

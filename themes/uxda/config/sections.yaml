@@ -1,0 +1,946 @@
+
+headerWithBackground:
+    name: Header With Background
+    description: use in main page
+    icon: icon-black-tie
+    fields:
+        _skip:
+            label: Header With Background
+            type: section
+        title:
+            label: Title
+            type: text
+#            attributes:
+#                maxlength: 200
+        desc:
+            label: Description
+            type: text
+
+headerWith3Colors:
+    name: Header With 3 Colors
+    description: use in other pages
+    icon: icon-black-tie
+    fields:
+        _skip:
+            label: Header With 3 Colors
+            type: section
+        light_gray:
+            label: Light Gray Text
+            type: text
+        gray:
+            label: Gray Text
+            type: text
+        green:
+            label: Green Text
+            type: text
+        sub_title:
+            label: Sub Title
+            type: text
+        desc:
+            label: Description
+            type: text
+
+headerVacancy:
+    name: Header For Vacancy
+    description: use in job page
+    icon: icon-black-tie
+    fields:
+        _skip:
+            label: Header For Vacancy
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: textarea
+            size: small
+        looking_for:
+            label: Title
+            type: text
+            default: 'UXDA is looking for'
+
+richeditor:
+    name: Richeditor
+    description: Richeditor text field
+    icon: icon-file-text-o
+    fields:
+        textarea:
+            label: Text Content
+            type: richeditor
+            size: large
+
+block4ColsWithIcons:
+    name: 4 Cols With Icons
+    description: Best for rates section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: 4 Cols With Icons
+            type: section
+        title:
+            label: Title
+            type: text
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    desc:
+                        label: Description
+                        type: text
+                    budget:
+                        label: Budget
+                        type: text
+                    term:
+                        label: Term
+                        type: text
+                    screens:
+                        label: Screens
+                        type: text
+                    image_alt:
+                        label: Image Alt
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 300
+                        imageHeight: 300
+
+block3ColsWithBtn:
+    name: 3 Cols With Button
+    description: Best for rates section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: 3 Cols With Button
+            type: section
+        btn_title:
+            label: Button Title
+            type: text
+        btn_url:
+            label: Button Url
+            type: text
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    desc:
+                        label: Description
+                        type: text
+
+block2Cols:
+    name: 2 Cols
+    description: Best for rates section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: 2 Cols
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: text
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    desc:
+                        label: Description
+                        type: textarea
+                        size: small
+
+blockCosts:
+    name: Costs Section
+    description: Best for rates section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Costs Section
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: text
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    desc:
+                        label: Description
+                        type: text
+                    euro:
+                        label: Euro
+                        type: text
+                    dollar:
+                        label: Dollar
+                        type: text
+
+blockLogosAwardsAndTrustedBy:
+    name: Awards and Trusted By With Logos Block
+    description: use in main page
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Awards and Trusted By With Logos Block
+            type: section
+        awards:
+            label: Awards
+            type: repeater
+            span: left
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    url:
+                        label: URL
+                        comment: "with http(s)://"
+                        type: text
+                    image_alt:
+                        label: Image Alt
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 150
+                        imageHeight: 150
+        trusted:
+            label: Trusted By
+            type: repeater
+            span: right
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    url:
+                        label: URL
+                        comment: "with http(s)://"
+                        type: text
+                    image_alt:
+                        label: Image Alt
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 150
+                        imageHeight: 150
+
+contacts:
+    name: Contact Form
+    description: use in cantacts page
+    icon: icon-check-square-o
+    fields:
+        _skip:
+            label: Contact Form
+            commentAbove:
+            type: section
+
+blockVideoSingle:
+    name: Video Single
+    description: Vimeo video
+    icon: icon-black-tie
+    fields:
+        _skip:
+            label: Video Single
+            type: section
+        title:
+            label: Title
+            type: text
+        url:
+            label: Vimeo Video URL
+            type: text
+            cssClass: video-url
+        image:
+            label: Vimeo Video Image
+            type: text
+            cssClass: video-image
+        margin:
+            label: Spacing
+            type: dropdown
+            options:
+                none: None
+                mrt400: Margin Top 400
+
+blockVideoMulti:
+    name: Video Multiple
+    description: Vimeo video
+    icon: icon-black-tie
+    fields:
+        _skip:
+            label: Video Multiple
+            type: section
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    url:
+                        label: Vimeo Video URL
+                        type: text
+                        cssClass: video-url
+                    image:
+                        label: Vimeo Video Image
+                        type: text
+                        cssClass: video-image
+
+blockNumbers:
+    name: Numbers Section
+    description: Best for main section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Numbers Section
+            type: section
+        title:
+            label: Title
+            type: text
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    number:
+                        label: Number
+                        type: text
+                    desc:
+                        label: Description
+                        type: text
+                        attributes:
+                            maxlength: 80
+                    unit:
+                        label: Unit
+                        type: text
+
+blockBlog1With3:
+    name: Blog Block
+    description: use in main page
+    icon: icon-check-square-o
+    fields:
+        _skip:
+            label: Blog Block
+            commentAbove:
+            type: section
+
+blockQA:
+    name: Question and Answer Section
+    description: Best for main page
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Question and Answer Section
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: text
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    desc:
+                        label: Description
+                        type: richeditor
+                        size: large
+
+blockWorks:
+    name: Works Block
+    description: use in main page
+    icon: icon-check-square-o
+    fields:
+        _skip:
+            label: Works Block (From Resources)
+            commentAbove:
+            type: section
+
+blockPortfolios:
+    name: Portfolio Block
+    description: use in portfolio page
+    icon: icon-check-square-o
+    fields:
+        _skip:
+            label: Portfolio Block (From Resources)
+            commentAbove:
+            type: section
+
+blockTeams:
+    name: Team Block
+    description: use in team page
+    icon: icon-check-square-o
+    fields:
+        _skip:
+            label: Team Block (From Resources)
+            commentAbove:
+            type: section
+
+blockOurValues:
+    name: Our Values Block
+    description: use in team page
+    icon: icon-check-square-o
+    fields:
+        _skip:
+            label: Our Values Block (From Resources)
+            commentAbove:
+            type: section
+
+blockOurTeamAchievments:
+    name: Our Team Achievments Block
+    description: use in team page
+    icon: icon-check-square-o
+    fields:
+        _skip:
+            label: Our Team Achievments Block (From Resources)
+            commentAbove:
+            type: section
+
+blockSuccessStories:
+    name: Success Stories Block
+    description: use in main page
+    icon: icon-check-square-o
+    fields:
+        _skip:
+            label: Success Stories Block (From Resources)
+            commentAbove:
+            type: section
+
+blockGalleryHorizon:
+    name: Gallery Horizon Block
+    description: Best for team page
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Gallery Horizon Block
+            type: section
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    image_alt:
+                        label: Image Alt
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 150
+                        imageHeight: 150
+
+blockListWithImage:
+    name: List With Image
+    description: Best for vacancy section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: List With Image
+            type: section
+        title:
+            label: Title
+            type: text
+        image_alt:
+            label: Image Alt
+            type: text
+        image:
+            label: Image
+            type: mediafinder
+            mode: image
+            imageWidth: 150
+            imageHeight: 150
+        position:
+            label: Image Position
+            type: dropdown
+            options:
+                right: Right
+                left: Left
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+
+blockList2Cols:
+    name: List In 2 Cols Block
+    description: use in vacancy page
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: List In 2 Cols Block
+            type: section
+        title:
+            label: Title
+            type: text
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+
+blockShare:
+    name: Share Block
+    description: use in vacancy page
+    icon: icon-check-square-o
+    fields:
+        _skip:
+            label: Share Block
+            commentAbove:
+            type: section
+        title:
+            label: Text
+            type: text
+            default: 'Share vacancy:'
+
+blockGetInTouch:
+    name: Get In Touch Block
+    description: use in vacancy page
+    icon: icon-check-square-o
+    fields:
+        _skip:
+            label: Get In Touch Block
+            commentAbove:
+            type: section
+        title:
+            label: Title
+            type: text
+            default: 'Get in touch with us!'
+        desc:
+            label: Description
+            type: text
+            default: 'Send us your CV and portfolio to'
+
+blockPyramid:
+    name: Pyramid Block
+    description: Best for process section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Pyramid Block
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: textarea
+            size: tiny
+        items:
+            label: Pyramids
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    desc:
+                        label: Description
+                        type: textarea
+                        size: tiny
+                    url:
+                        label: URL
+                        type: text
+                    items:
+                        label: Items
+                        type: repeater
+                        form:
+                            fields:
+                                title:
+                                    label: Title
+                                    type: text
+                                desc:
+                                    label: Description
+                                    type: textarea
+                                    size: tiny
+                                image_alt:
+                                    label: Image Alt
+                                    type: text
+                                image:
+                                    label: Image
+                                    type: mediafinder
+                                    mode: image
+                                    imageWidth: 300
+                                    imageHeight: 300
+
+blockBenefitWithCarousel:
+    name: Benefit With Carousel Block
+    description: Best for process section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Benefit With Carousel Block
+            type: section
+        title:
+            label: Title
+            type: text
+        sub_title:
+            label: Sub Title
+            type: text
+        desc:
+            label: Description
+            type: textarea
+            size: tiny
+        items:
+            label: Carousels
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    desc:
+                        label: Description
+                        type: textarea
+                        size: tiny
+                    url:
+                        label: URL
+                        type: text
+                    show_arrow:
+                        label: Display Carousel Arrows?
+                        type: switch
+                    items:
+                        label: Items
+                        type: repeater
+                        form:
+                            fields:
+                                image_alt:
+                                    label: Image Alt
+                                    type: text
+                                image:
+                                    label: Image
+                                    type: mediafinder
+                                    mode: image
+                                    imageWidth: 300
+                                    imageHeight: 300
+
+blockBenefit:
+    name: Benefit Block
+    description: Best for process section
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Benefit Block
+            type: section
+        title:
+            label: Title
+            type: text
+        sub_title:
+            label: Sub Title
+            type: text
+        desc:
+            label: Description
+            type: textarea
+            size: tiny
+        image_alt:
+            label: Image Alt
+            type: text
+        image:
+            label: Image
+            type: mediafinder
+            mode: image
+            imageWidth: 300
+            imageHeight: 300
+        items:
+            label: Values
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                        default: 'Value for'
+                    title_green:
+                        label: Title Green
+                        type: text
+                    items:
+                        label: Items
+                        type: repeater
+                        form:
+                            fields:
+                                title:
+                                    label: Title
+                                    type: text
+
+blockRisk:
+    name: Risk Section
+    description: Best for process page
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Risk Section
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: textarea
+            size: tiny
+        image_alt:
+            label: Image Alt
+            type: text
+        image:
+            label: Image
+            type: mediafinder
+            mode: image
+            imageWidth: 300
+            imageHeight: 300
+        show_btn:
+            label: Display buttom block?
+            type: switch
+        items:
+            label: Items
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    desc:
+                        label: Description
+                        type: richeditor
+                        size: large
+
+blockCallToAction:
+    name: Call To Action Btn Block
+    description: use in any pages
+    icon: icon-black-tie
+    fields:
+        _skip:
+            label: Call To Action Btn Block
+            type: section
+        title:
+            label: Btn Title
+            type: text
+        align:
+            label: Align
+            type: dropdown
+            options:
+                justify-content-start: Left
+                justify-content-center: Center
+                justify-content-end: Right
+        margin:
+            label: Spacing
+            type: dropdown
+            options:
+                none: None
+                margin-top-220-all: Top 220 / All
+                margin-top-140-all: Top 140 / All
+                margin-top-80-all: Top 80 / All
+                margin-top-220-dynamic: Top 220 / Dynamic
+                margin-top-140-dynamic: Top 140 / Dynamic
+                margin-top-80-dynamic: Top 80 / Dynamic
+        url:
+            label: URL
+            type: text
+
+blockRoadMap:
+    name: Road Map Block (Static)
+    description: use in process page
+    icon: icon-check-square-o
+    fields:
+        _skip:
+            label: Road Map Block (Static)
+            commentAbove:
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: text
+        items:
+            label: Items
+            type: repeater
+            minItems: 7
+            maxItems: 7
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    desc:
+                        label: Description
+                        type: textarea
+                        size: small
+                    col1_title:
+                        label: 'Col #1 Title'
+                        type: text
+                        span: auto
+                    col2_title:
+                        label: 'Col #2 Title'
+                        type: text
+                        span: auto
+                    col1:
+                        label: 'Col #1'
+                        type: repeater
+                        span: auto
+                        form:
+                            fields:
+                                title:
+                                    label: Title
+                                    type: text
+                    col2:
+                        label: 'Col #2'
+                        type: repeater
+                        span: auto
+                        form:
+                            fields:
+                                title:
+                                    label: Title
+                                    type: text
+
+blockMap:
+    name: Map Block
+    description: use in portfolio page
+    icon: icon-th-large
+    fields:
+        _skip:
+            label: Map Block
+            type: section
+        title:
+            label: Title
+            type: text
+        desc:
+            label: Description
+            type: text
+        map_alt:
+            label: Map Alt
+            type: text
+        map:
+            label: Map
+            type: mediafinder
+            mode: image
+            imageWidth: 150
+            imageHeight: 150
+        col1:
+            label: 'Col #1'
+            type: repeater
+            span: auto
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 150
+                        imageHeight: 150
+        col2:
+            label: 'Col #2'
+            type: repeater
+            span: auto
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 150
+                        imageHeight: 150
+        col3:
+            label: 'Col #3'
+            type: repeater
+            span: auto
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 150
+                        imageHeight: 150
+        col4:
+            label: 'Col #4'
+            type: repeater
+            span: auto
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 150
+                        imageHeight: 150
+        col5:
+            label: 'Col #5'
+            type: repeater
+            span: auto
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 150
+                        imageHeight: 150
+        col6:
+            label: 'Col #6'
+            type: repeater
+            span: auto
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 150
+                        imageHeight: 150
+
+
+
+
+
+

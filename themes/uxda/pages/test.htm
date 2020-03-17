@@ -1,0 +1,118 @@
+title = "test"
+url = "/test"
+layout = "default"
+is_hidden = 0
+meta_title = "How to Design a Financial Product | UXDA Blog, Insights, Trends"
+meta_description = "In our blog, explore the best ideas, tips, case studies, and banking trends in over 70 UX design
+articles already read by 300K financial experts"
+enabled_in_sitemap = 1
+use_updated_at = 1
+changefreq = "always"
+priority = 0.1
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 1
+categoryPage = 404
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = 404
+==
+<?php
+function onInit() {
+    $score = get('page');
+}
+?>
+==
+{% set posts=blogPosts.posts %}
+{% partial 'others/blog-header' %}
+<div class="container">
+    {% partial "others/blog-nav" %}
+</div>
+{% if not search_query %}
+<div id="showBlogResults">
+    {% partial "others/blog-header-right" class='mrb-0' %}
+    {% if blogPosts.posts.currentPage == 1 %}
+    {% partial 'others/blog-most-read' %}
+    {% endif %}
+    {% partial 'others/blog-small-blogs' %}
+</div>
+{% endif %}
+<div id="showSearchResults">
+    {% partial 'others/blog-search-results' %}
+</div>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<div class="modal sizeUp" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog portfolio" role="document">
+        <div class="modal-content portfolio">
+            <div class="modal-header d-flex justify-content-end">
+                <a href="" data-dismiss="modal"><img class="lazy"
+                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        data-src="{{ 'assets/img/contacts/cross.svg'|theme }}" alt="Close" /></a>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+                <!-- <div class="deliverables-content"> -->
+                <div class="uxda-popover fadeIn animated duration-500  fade show bs-popover-bottom popover-modal"
+                    role="tooltip" aria-hidden="true" id="popover7009" x-placement="bottom">
+                    <div class="arrow" style="left: 36px;"></div>
+                    <div class="uxda-popover-header">
+                        <img class="avatar"
+                            src="https://dev.uxdesignagency.com/storage/app/media/thumb/073/6d7/35d/uxda-ux-inspiration-officer-monika__128.jpg"
+                            alt="Avatar">
+                        <div>
+                            <h4 class="pop-name">Monika</h4>
+                            <p class="pop-position">Financial Inspiration Officer</p>
+                        </div>
+                    </div>
+                    <p class="pop-description">Monika is our voice - able to reach the other side of the world with the
+                        power of inspiration. Her remarkable experience as a TV and radio personality in the leading
+                        media makes her the strongest communicator of UXDA's mission. Monika's biggest joy is to see
+                        thousands of people getting inspired by our ideas.</p>
+                    <div class="social">
+                        <a class="d-none pop-twitter" href="#" target="_blank" rel="noopener">
+                            <img class="lazy"
+                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                data-src="https://dev.uxdesignagency.com/themes/uxda/assets/img/team/twitter-gray.svg"
+                                alt="twitter">
+                        </a>
+                        <a class="d-none pop-behance" href="#" target="_blank" rel="noopener">
+                            <img class="lazy"
+                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                data-src="https://dev.uxdesignagency.com/themes/uxda/assets/img/team/behance-gray.svg"
+                                alt="instagram">
+                        </a>
+                        <a class="pop-linkedin" href="https://www.linkedin.com/in/monika-calite/" target="_blank"
+                            rel="noopener">
+                            <img class="lazy loaded"
+                                src="https://dev.uxdesignagency.com/themes/uxda/assets/img/team/linkedin-gray.svg"
+                                data-src="https://dev.uxdesignagency.com/themes/uxda/assets/img/team/linkedin-gray.svg"
+                                alt="linkedin" data-was-processed="true">
+                        </a>
+                        <a class="d-none pop-pinterest" href="#" target="_blank" rel="noopener">
+                            <img class="lazy"
+                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                data-src="https://dev.uxdesignagency.com/themes/uxda/assets/img/team/pinterest-gray.svg"
+                                alt="pinterest">
+                        </a>
+                        <a class="d-none pop-dribbble" href="#" target="_blank" rel="noopener">
+                            <img class="lazy"
+                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                data-src="https://dev.uxdesignagency.com/themes/uxda/assets/img/team/dribbble-gray.svg"
+                                alt="pinterest">
+                        </a>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</div>

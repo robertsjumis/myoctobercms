@@ -1,0 +1,46 @@
+[viewBag]
+==
+<div class="row process-carousel-right">
+	<div class="col-xl-5">
+		<h3>{{ section.title|raw }}</h3>
+		<p class="p3grayleft">{{ section.desc }}</p>
+		{% if section.url %}
+		<div class="uxda-btn-href-container">
+    		<a href="{{ section.url }}" class="uxda-btn-href pyramid-btn-top">
+    			{{ 'benefit.read_more'|_ }} <span class="btn-arrow-right-green"></span>
+    		</a>
+		</div>
+		{% endif %}
+	</div>
+	<div class="col-xl-6 offset-xl-1 process-carousel">
+		<div id="carouselIndicators{{id}}" class="carousel slide" data-ride="carousel" data-interval="false">
+			<ol class="carousel-indicators">
+				{% for item in section.items %}
+				<li data-target="#carouselIndicators{{id}}" data-slide-to="{{loop.index0}}" {% if loop.first %} class="active" {% endif %}></li>
+				{% endfor %}
+			</ol>
+			<div class="carousel-inner">
+				{% for item in section.items %}
+				<div class="carousel-item {% if loop.first %}active{% endif %}">
+					<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.image|media }}"  alt="{{item.image_alt}}"/>
+				</div>
+				{% endfor %}
+			</div>
+			{% if section.show_arrow %}
+			<a class="carousel-control-prev" href="#carouselIndicators{{id}}" role="button" data-slide="prev">
+				<span class="sr-only"><img src="{{ 'assets/img/icons/arrow-left-gray.svg'|theme }}" alt="Prev"/></span>
+			</a>
+			<a class="carousel-control-next" href="#carouselIndicators{{id}}" role="button" data-slide="next">
+				<span class="sr-only"><img src="{{ 'assets/img/icons/arrow-gray-right.svg'|theme }}" alt="Next"/></span>
+			</a>
+			{% endif %}
+		</div>
+	</div>
+	{% if section.url %}
+	<div class="uxda-btn-href-container">
+    	<a href="{{ section.url }}" class="uxda-btn-href pyramid-btn-bottom">
+			{{ 'benefit.read_more'|_ }} <span class="btn-arrow-right-green"></span>
+    	</a>
+	</div>
+	{% endif %}
+</div>

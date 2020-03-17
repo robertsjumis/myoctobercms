@@ -1,0 +1,86 @@
+[viewBag]
+==
+<div id="popover-team" class="d-none">
+	<div class="popover fadeIn animated duration-500 uxda-popover" role="tooltip" aria-hidden="true">
+		<div class="arrow"></div>
+		<div class="uxda-popover-header">
+			<img class="avatar" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Avatar" />
+			<div>
+				<h4 class="pop-name"></h4>
+				<p class="pop-position"></p>
+			</div>
+		</div>
+		<p class="pop-description"></p>
+		<div class="social">
+			<a class="d-none pop-twitter" href="#" target="_blank" rel="noopener">
+				<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/team/twitter-gray.svg'|theme }}" alt="twitter"/>
+			</a>
+			<a class="d-none pop-behance" href="#" target="_blank" rel="noopener">
+				<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/team/behance-gray.svg'|theme }}" alt="instagram"/>
+			</a>
+			<a class="d-none pop-linkedin" href="#" target="_blank" rel="noopener">
+				<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/team/linkedin-gray.svg'|theme }}" alt="linkedin"/>
+			</a>
+			<a class="d-none pop-pinterest" href="#" target="_blank" rel="noopener">
+				<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/team/pinterest-gray.svg'|theme }}" alt="pinterest"/>
+			</a>
+			<a class="d-none pop-dribbble" href="#" target="_blank" rel="noopener">
+				<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/team/dribbble-gray.svg'|theme }}" alt="pinterest"/>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="modal sizeUp" id="authorModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog portfolio" role="document">
+		<div class="modal-content portfolio">
+			<div class="modal-header d-flex justify-content-end">
+				<a href="" data-dismiss="modal">
+					<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/contacts/cross.svg'|theme }}" alt="Close" /></a>
+			</div>
+			<div class="modal-body d-flex justify-content-center">
+				<!-- <div class="deliverables-content"> -->
+				<div class="uxda-popover fadeIn animated duration-500 bs-popover-bottom popover-modal" role="tooltip" aria-hidden="true" x-placement="bottom">
+					<div class="arrow" style="left: 36px;"></div>
+					<div class="uxda-popover-header">
+						<img class="avatar" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Avatar" />
+						<div>
+							<h4 class="pop-name"></h4>
+							<p class="pop-position"></p>
+						</div>
+					</div>
+					<p class="pop-description"></p>
+					<div class="social">
+						<a class="d-none pop-twitter" href="#" target="_blank" rel="noopener">
+							<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/team/twitter-gray.svg'|theme }}" alt="twitter"/>
+						</a>
+						<a class="d-none pop-behance" href="#" target="_blank" rel="noopener">
+							<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/team/behance-gray.svg'|theme }}" alt="instagram"/>
+						</a>
+						<a class="d-none pop-linkedin" href="#" target="_blank" rel="noopener">
+							<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/team/linkedin-gray.svg'|theme }}" alt="linkedin"/>
+						</a>
+						<a class="d-none pop-pinterest" href="#" target="_blank" rel="noopener">
+							<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/team/pinterest-gray.svg'|theme }}" alt="pinterest"/>
+						</a>
+						<a class="d-none pop-dribbble" href="#" target="_blank" rel="noopener">
+							<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/team/dribbble-gray.svg'|theme }}" alt="pinterest"/>
+						</a>
+					</div>
+				</div>
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="cookie d-none" id="cookie_notice">
+	<div class="cookie-header">
+		<img src="{{ 'assets/img/icons/cookies.svg'|theme }}" alt="" />
+		<h4>{{ 'cookie.title'|_ }}</h4>
+	</div>
+	<p>{{ 'cookie.desc'|_ }} <a href="/privacy">{{ 'cookie.policy'|_ }}</a>.</p>
+	<div class="cookie-buttons">
+		<a href="#" class="cookie-btn-accept uxda-btn-href">{{ 'cookie.btn'|_ }}</a>
+	</div>
+</div>

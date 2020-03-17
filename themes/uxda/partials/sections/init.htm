@@ -1,0 +1,9 @@
+[viewBag]
+==
+{% for section in sections %}
+
+    {% if partial('sections/' ~ section._group) %}
+        {% partial 'sections/' ~ section._group section=section %}
+    {% endif %}
+
+{%endfor%}

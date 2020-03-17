@@ -1,0 +1,48 @@
+[viewBag]
+
+[builderList achievments]
+modelClass = "Cubecamp\Uxda\Models\OurTeamAchievment"
+scope = "scopeActive"
+scopeValue = "{{ :scope }}"
+displayColumn = "*"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "sort_order"
+==
+<div class="container team-achievments">
+    <h2>{{ 'team.our_team_achievements'|_ }}</h2>
+    
+    <div class="row animation" data-animation="fadeIn animated slower">
+        <div class="scrollbars1 col-xl-6 col-12 achievments-col">
+			{% set records = achievments.records %}
+
+			{% for item in records %}
+
+			{% set not_active = '' %}
+
+			{% if loop.index > 5 %}
+			{% set not_active = 'd-none d-xl-block' %}
+			{% endif %}
+
+			<div class="achievments-item {% if loop.first %} active {% endif %} {{not_active}}">
+				<h4>{{item.date|date('Y F')}} • {{item.place}} • {{item.country}}</h4>
+				<p class="p4left">{{item.name}}</p>
+				{% if item.video %}<a href="{{item.video}}" target="_blank" class="video-link">{{ 'team.video_link'|_ }}</a>{% endif %}
+				<div class="d-none achievments-images" data-json="{{item.images|uxda_achievments_json()}}" {#data-json="{{item.images|json_encode()}}"#}></div>
+			</div>
+
+			{% endfor %}
+        </div>
+        <div class="col-xl-6 achievments-carousel">
+            <div id="carouselAchievments" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators"></ol>
+                <div class="carousel-inner"></div>
+            </div>
+        </div>
+    </div>
+	<a href="#" class="uxda-btn-href show-all-achievements">
+		{{ 'team.show_all_achievements'|_ }} <span class="btn-arrow-right-green"></span>
+	</a>
+</div>

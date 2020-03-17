@@ -1,0 +1,27 @@
+[viewBag]
+==
+<div class="container apply-become-part">
+    <h3>{{section.title}}</h3>
+    <div class="ux-ui row ">
+        {% set items_in_col = section.items|length // 2 %}
+        <div class="ux-ui-col col-xl-5 col-12">
+        {% for item in section.items[:items_in_col] %}            
+            {% if not loop.first %}<span class="dotted-green-line"></span>{% endif %}
+            <div class="num-name d-flex align-items-center">
+                <div class="circle-num-green">{{loop.index}}</div>
+                <p class="p4left gray ux-ui-li">{{item.title}}</p>
+            </div>                
+            <span class="dotted-green-line d-none-desktop"></span>
+	    {% endfor %}
+	    </div>
+        <div class="ux-ui-col col-xl-5 offset-xl-1 col-12">
+        {% for item in section.items[items_in_col:] %}
+            {% if not loop.first %}<span class="dotted-green-line"></span>{% endif %}
+            <div class="num-name d-flex align-items-center">
+                <div class="circle-num-green">{{loop.index + items_in_col}}</div>
+                <p class="p4left gray ux-ui-li">{{item.title}}</p>
+            </div>                        
+	    {% endfor %}   
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+[viewBag]
+==
+<script src="{{ [
+    'assets/js/jquery.min.js',
+    'assets/js/popper.min.js',
+    'assets/js/bootstrap.min.js',
+    'assets/js/lazyload.verlok.min.js',
+    'assets/js/countUp.min.js',
+    'assets/js/jsshare.js',
+    'assets/js/moment.js',
+    'assets/js/swiper.min.js',
+    'assets/js/jquery.waypoints.min.js',
+    'assets/js/jquery.sticky.js',
+	'assets/js/jquery.countUp.js',
+    'assets/js/jquery.mousewheel.js',
+    'assets/js/jquery.classyscroll.js',
+    'assets/js/jquery.scrollme.js',
+    'assets/js/owl.carousel.min.js',
+    'assets/js/main.js',
+    'assets/js/other.js',
+	'@framework',
+	'@framework.extras'
+]|theme }}" defer="defer"></script>
+{#
+	'assets/js/hammer.min.js',
+	'assets/js/jquery.hammer.js',
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+#}
+{% scripts %}
+
+{% if this.theme.show_chat %}
+    {% partial 'layouts/widget_chat' %}
+{% endif %}
+{{this.theme.html_footer|raw}}

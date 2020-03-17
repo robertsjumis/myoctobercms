@@ -1,0 +1,29 @@
+[viewBag]
+
+[staticMenu]
+code = "main"
+==
+<header class="mobile">
+    <div class="header-icons">
+        <a href="{{'/'|app}}">
+			<img src="{{ 'assets/img/nav/uxda-nav-logo.svg'|theme }}" alt="UXDA" class="animated fadeInLeftWelcome slow"/>
+		</a>
+		<div class="header-menu"></div>
+	</div>
+    <nav class="close fadeInDown animated">
+		{% if not activeMenuItem %}
+		{% set activeMenuItem = 'none' %}
+		{% endif %}
+        {% if staticMenu.menuItems %}
+            {% for item in staticMenu.menuItems %}
+               <a href="{{ item.url }}" {{ item.isActive or item.isChildActive or activeMenuItem == item.code ? 'class="active"' : '' }}>{{ item.title }}</a>
+            {% endfor %}
+        {% endif %}
+    </nav>
+    <div class="header-social close fadeInRightWelcome animated slow">
+        <a target="_blank" rel="noopener" href="{{this.theme.link_twitter}}" class="header-social-twitter"></a>
+        <a target="_blank" rel="noopener" href="{{this.theme.link_instagram}}" class="header-social-ig"></a>
+        <a target="_blank" rel="noopener" href="{{this.theme.link_linkedin}}" class="header-social-ln"></a>
+        <a target="_blank" rel="noopener" href="{{this.theme.link_pinterest}}" class="header-social-pn"></a>
+    </div>
+</header>

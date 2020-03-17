@@ -1,0 +1,25 @@
+[blogPosts]
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "random"
+categoryPage = 404
+postPage = 404
+
+[viewBag]
+==
+<div class="blog-more-our-blog">
+    <div class="container">
+        <h2>{{ 'blog.more_from_our_blog'|_ }}</h2>
+        <div class="row">
+            <div class="col-xl-4">
+                {% partial 'others/small-blog' small_post=blogPosts.posts.shift() %}
+            </div>
+            <div class="col-xl-4">
+                {% partial 'others/small-blog' small_post=blogPosts.posts.shift() %}
+            </div>
+            <div class="col-xl-4">
+                {% partial 'others/small-blog' small_post=blogPosts.posts.shift() %}
+            </div>
+        </div>
+    </div>
+</div>

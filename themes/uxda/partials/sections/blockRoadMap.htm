@@ -1,0 +1,63 @@
+[viewBag]
+==
+<?php
+function onStart()
+{
+
+	$this->addJs(['assets/js/lottie.min.js', 'assets/js/other.process.js'], [
+		'defer' => 'defer'
+	]);
+
+}
+?>
+==
+<div class="road-map-container">
+	<div class="container slideFromBottomHeader delay-900">
+		<h2 class="">{{section.title}}</h2>
+		<h3 class="">{{section.desc}}</h3>
+		<div></div>
+	</div>
+	<div class="d-none d-xl-block">
+		{% partial 'others/process-roadmap' %}
+	</div>
+	<div class="container d-xl-none">
+
+		<ul class="nav nav-tabs road-map-tabs" id="myTab" role="tablist">
+			{% for item in section.items %}
+			<li class="nav-item team-values-nav road-map-tab" role="presentation">
+				<a href="#road-map-{{loop.index}}" {% if loop.first %}class="active"{% endif %} data-toggle="tab" id="road-map-{{loop.index}}-tab" role="tab">{{loop.index}}</a>
+			</li>
+			{% endfor %}
+		</ul>
+		<div class="tab-content" id="myTabContent">
+			{% for item in section.items %}
+			<div class=" tab-pane fade show {% if loop.first %}active{% endif %}" id="road-map-{{loop.index}}" role="tabpanel" aria-labelledby="road-map-{{loop.index}}-tab">
+				<div class="road-map-discription">
+					<h3>{{item.title}}</h3>
+					<p class="p4left gray">{{item.desc}}</p>
+					<div class="road-map-list">
+						<div class="half">
+							<h4>{{item.col1_title}}</h4>
+							<ul class="process gray">
+								{% for item in item.col1 %}
+								<li>{{item.title}}</li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="half">
+							<h4 class="green">{{item.col2_title}}</h4>
+							<ul class="process">
+								{% for item in item.col2 %}
+								<li>{{item.title}}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		
+		
+	</div>
+</div>

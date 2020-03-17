@@ -1,0 +1,6 @@
+name: UXDA
+description: ''
+author: 'CubeCamp LTD'
+homepage: 'https://cubecamp.com'
+code: uxda
+form: config/fields.yaml

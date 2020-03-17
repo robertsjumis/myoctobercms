@@ -1,0 +1,48 @@
+title = "Architects"
+url = "/blog/category/architects"
+layout = "default"
+is_hidden = 0
+enabled_in_sitemap = 0
+use_updated_at = 0
+changefreq = "always"
+priority = 0.1
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "architects"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = 404
+
+[blogCategories]
+slug = "architects"
+displayEmpty = 1
+categoryPage = 404
+==
+<?php
+function onInit()
+{
+    $this['activeMenuItem'] = 'blog';
+
+}
+function onEnd()
+{
+	// Optional - set the page title to the category name
+	if ($this->category)
+		$this->page->title = $this->category->name;
+}
+?>
+==
+{% set posts=blogPosts.posts %}
+{% partial 'others/blog-category-header' %}
+{% if not search_query %}
+<div id="showBlogResults" data-category="{{category.id}}">
+    {% partial "others/blog-header-right" class='mrb-0' %}
+    {% partial 'others/blog-small-blogs' %}
+</div>
+{% endif %}
+<div id="showSearchResults">
+    {% partial 'others/blog-search-results' %}
+</div>

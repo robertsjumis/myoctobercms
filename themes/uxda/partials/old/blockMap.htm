@@ -1,0 +1,173 @@
+[viewBag]
+==
+{#
+<script>
+		function initFlagCarusel() {
+
+			if(window._viewport === 'desktop') {
+				$(".col-flags").removeClass("d-none");
+			} else {
+				$(".col-flags").addClass("d-none");
+			}
+
+
+			if (window._viewport === 'tablet') {
+
+				$(".col-flags-tablet-1").removeClass("d-none");
+				$(".col-flags-tablet-2").addClass("d-none");
+
+				$("#carousel_mobile").addClass("d-none");
+				$("#carousel_tablet").removeClass("d-none");
+
+				count = $("#carousel_tablet li").length;
+
+			}
+			else if (window._viewport === 'mobile') {
+
+				count = $("#carousel_mobile li").length;
+
+				$(".col-flags-mobile-1").removeClass("d-none");
+				$(".col-flags-mobile-2, .col-flags-mobile-3").addClass("d-none");
+
+				$("#carousel_tablet").addClass("d-none");
+				$("#carousel_mobile").removeClass("d-none");
+
+			}
+
+		}
+		
+				if($(".portfolio-map .row").length) {
+
+			$(".portfolio-map .row").hammer().on("swipeleft", function () {
+
+				var active = $("#carousel_" + window._viewport + " li.active");
+
+				if(active.length) {
+
+					var index = active.data("index"), current = index;
+
+					if(index == count) {
+						index = 1;
+					}
+					else {
+						index++;
+					}
+
+					$(".col-flags-" + window._viewport + "-" + current).addClass("d-none");
+					$(".col-flags-" + window._viewport + "-" + index).removeClass("d-none");
+
+					$("#carousel_" + window._viewport + " li.active").removeClass("active");
+					$("#carousel_" + window._viewport + " li:eq(" + (index - 1) + ")").addClass("active");
+
+				}
+
+			}).on('swiperight', function () {
+
+				var active = $("#carousel_" + window._viewport + " li.active");
+
+				if(active.length) {
+
+					var index = active.data("index"), current = index;
+
+					if(index == 1) {
+						index = count;
+					}
+					else {
+						index--;
+					}
+
+					$(".col-flags-" + window._viewport + "-" + current).addClass("d-none");
+					$(".col-flags-" + window._viewport + "-" + index).removeClass("d-none");
+
+					$("#carousel_" + window._viewport + " li.active").removeClass("active");
+					$("#carousel_" + window._viewport + " li:eq(" + (index - 1) + ")").addClass("active");
+
+				}
+
+			});
+
+		}
+
+		$(document).on('viewport', function () {
+			initFlagCarusel();
+		});
+
+		initFlagCarusel();
+
+</script>
+
+#}
+
+<div class="container portfolio-map">
+    <h2>{{section.title}}</h2>
+    <h2 class="pt14">{{section.desc}}</h2>
+    <div class="portfolio-map-img">
+        <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ section.map|media }}" alt="{{ section.map_alt|default(section.title) }}" />
+    </div>
+
+    <div class="row">
+        <div class="col-xl-2 col-md-4 col-6 col-flags col-flags-mobile-1 col-flags-tablet-1">
+			{% for item in section.col1 %}
+            <div class="portfolio-country">
+                <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.image|media }}" alt="{{item.title}}" />
+                <p class="pt16">{{item.title}}</p>
+            </div>
+			{% endfor %}
+        </div>
+        <div class="col-xl-2 col-md-4 col-6 col-flags col-flags-mobile-1 col-flags-tablet-1">
+			{% for item in section.col2 %}
+            <div class="portfolio-country">
+                <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.image|media }}" alt="{{item.title}}" />
+                <p class="pt16">{{item.title}}</p>
+            </div>
+			{% endfor %}
+        </div>
+        <div class="col-xl-2 col-md-4 col-6 col-flags col-flags-mobile-2 col-flags-tablet-1">
+			{% for item in section.col3 %}
+            <div class="portfolio-country">
+                <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.image|media }}" alt="{{item.title}}" />
+                <p class="pt16">{{item.title}}</p>
+            </div>
+			{% endfor %}
+        </div>
+        <div class="col-xl-2 col-md-4 col-6 col-flags col-flags-mobile-2 col-flags-tablet-2">
+			{% for item in section.col4 %}
+            <div class="portfolio-country">
+                <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.image|media }}" alt="{{item.title}}" />
+                <p class="pt16">{{item.title}}</p>
+            </div>
+			{% endfor %}
+        </div>
+        <div class="col-xl-2 col-md-4 col-6 col-flags col-flags-mobile-3 col-flags-tablet-2">
+			{% for item in section.col5 %}
+            <div class="portfolio-country">
+                <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.image|media }}" alt="{{item.title}}" />
+                <p class="pt16">{{item.title}}</p>
+            </div>
+			{% endfor %}
+        </div>
+        <div class="col-xl-2 col-md-4 col-6 col-flags col-flags-mobile-3 col-flags-tablet-2">
+			{% for item in section.col6 %}
+            <div class="portfolio-country">
+                <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.image|media }}" alt="{{item.title}}" />
+                <p class="pt16">{{item.title}}</p>
+            </div>
+			{% endfor %}
+        </div>
+    </div>
+	<ol class="carousel-indicators d-none" id="carousel_mobile">
+		<li data-target="#carouselFlagsIndicators" data-index="1" class="active"></li>
+		<li data-target="#carouselFlagsIndicators" data-index="2"></li>
+		<li data-target="#carouselFlagsIndicators" data-index="3"></li>
+	</ol>
+	<ol class="carousel-indicators d-none" id="carousel_tablet">
+		<li data-target="#carouselFlagsIndicators" data-index="1" class="active"></li>
+		<li data-target="#carouselFlagsIndicators" data-index="2"></li>
+	</ol>
+
+    <div class="portfolio-map-btn">
+        <a href="{{'/contacts'|app}}" class="uxda-btn-href">
+            Add your location <span class="btn-arrow-right-green"></span>
+        </a>
+    </div>
+</div>

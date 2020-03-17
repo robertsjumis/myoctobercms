@@ -1,0 +1,31 @@
+[viewBag]
+==
+<div class="container rates-why-choose">
+    <h2>{{ section.title }}</h2>
+    <h3 class="h4">{{ section.desc }}</h3>
+    <div class="row">
+
+		{% for item in section.items %}
+
+		{% if loop.index0 % 2 == 0 %}
+		<div class="col-xl-5 col-12 rates-why-choose-card">
+			<h3>{{item.title}}</h3>
+			<div class="quote-img-big" aria-hidden="true"></div>
+			<p class="p4left gray">
+				{{item.desc}}
+			</p>
+		</div>
+		{% else %}
+		<div class="col-xl-5 offset-xl-1 col-12 rates-why-choose-card">
+			<h3>{{item.title}}</h3>
+			<div class="quote-img-big" aria-hidden="true"></div>
+			<p class="p4left gray">
+				{{item.desc}}
+			</p>
+		</div>
+		{% endif %}
+
+		{% endfor %}
+		
+    </div>
+</div>

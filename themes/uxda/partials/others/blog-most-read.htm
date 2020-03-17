@@ -1,0 +1,66 @@
+[viewBag]
+
+[blogPosts blogMostRead]
+pageNumber = "{{ :page }}"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "view_counter desc"
+categoryPage = 404
+postPage = 404
+==
+{% set post=blogMostRead.posts.shift() %}
+{% set featured_image=post.filename %}
+{# add cursor:pointer to the main blogs classes #}
+<div class="most-read-container-wrap">
+    <div class="container most-read-container">
+        <h2 class="padding-screen-fix">{{ 'blog.most_popular'|_ }}</h2>
+        <div class="row most-read-show-first">
+            <div class="col-xl-4 col-12">
+                <div class="blog-title most-read">
+                    <a href="{{('/blog/' ~ post.slug)|app}}"><h3>{{post.title}}</h3></a>
+                </div>
+                <div class="blog-text most-read-text">
+                    <p class="p4left">
+                        {{post.excerpt}}
+                    </p>
+                    <div class="blog-authors">
+                        <div class="blog-author-avatar">
+                            {% for author in post.authors %}
+                            <a href="#" class="void">
+								<img class="avatar lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ author.image ? author.image|media|uxda_resize(128) : 'assets/img/avatar.png'|theme }}" alt="{{author.name}}" />
+							</a>
+                            {% endfor %}
+                        </div>
+                        <div class="author-read-time">
+                            {% for author in post.authors %}
+                            {% if not loop.first %}<span class="author"> & </span>{% endif %}
+                            <a href="#" class="author void popover-team" data-team="{{author|uxda_team_json()}}" data-image="{{ author.image ? author.image|media|uxda_resize(128) : 'assets/img/avatar.png'|theme }}">{{author.name}}</a>
+                            {% endfor %}
+                            <p class="pt14 gray">• <span class="reading-time" data-seconds="{{post.reading_time}}">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8 col-12 blog-img">
+				<a href="{{('/blog/' ~ post.slug)|app}}">
+					<img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ featured_image ? featured_image|media|uxda_resize(1500) : 'assets/img/main/blog-img.png'|theme }}" alt="{{post.title}}" />
+				</a>
+                <div class="most-read-badge">
+                    <h3><span class="view-counter" data-views="{{post.view_counter}}">{{post.view_counter}}</span> {{ 'blog.reads'|_ }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row blog-most-read-small-wrap">
+			<div class="col-12 show-first">
+				{% partial 'others/blog-most-read-small' post=post %}
+			</div>
+            <div class="col-xl-6 col-12">
+                {% partial 'others/blog-most-read-small' post=blogMostRead.posts.shift() %}
+            </div>
+            <div class="col-xl-6 col-12">
+                {% partial 'others/blog-most-read-small' post=blogMostRead.posts.shift() %}
+            </div>
+        </div>
+    </div>
+
+</div>

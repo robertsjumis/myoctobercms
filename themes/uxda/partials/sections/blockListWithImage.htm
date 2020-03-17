@@ -1,0 +1,37 @@
+[viewBag]
+==
+{% if section.position == 'left' %}
+<div class="container apply-wrap apply-wrap-text-right">
+    <div class="row">
+        <div class="col-xl-6 col-12">
+            <img class="imgw100 lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ section.image|media }}" alt="{{ section.image_alt|default(section.title) }}"/>
+        </div>
+        <div class="col-xl-5 offset-xl-1 col-12 apply-list">
+            <h3>{{ section.title }}</h3>
+            <ul>
+            {% for item in section.items %}
+                <li>{{item.title}}</li>
+		    {% endfor %}    
+            </ul>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% if section.position == 'right' %}
+<div class="container apply-wrap">
+    <div class="row">
+        <div class="col-xl-5 col-12 apply-list">
+            <h3>{{ section.title }}</h3>
+            <ul>
+            {% for item in section.items %}
+                <li>{{item.title}}</li>
+		    {% endfor %}    
+            </ul>
+        </div>
+        <div class="col-xl-6 offset-xl-1 col-12">
+            <img class="imgw100 lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ section.image|media }}" alt="{{ section.image_alt|default(section.title) }}"/>
+        </div>
+    </div>
+</div>
+{% endif %}

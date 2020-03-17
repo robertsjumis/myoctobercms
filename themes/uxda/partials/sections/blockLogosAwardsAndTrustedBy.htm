@@ -1,0 +1,26 @@
+[viewBag]
+==
+<div class="container awards opacity animation delay-1000" data-animation="slideFromBottomWelcome">
+	<div class="row our-awards">
+		{% for item in section.awards %}
+		<div class="col-xl-2 col-4 award-div">
+			{% if loop.first %}
+			<h2 class="ls2 light-black">{{ 'logos.awarded'|_ }}</h2>
+			{% endif %}
+			<a target="_blank" href="{{item.url}}"><img class="lazy grayscale grayscale-fade" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.image|media|uxda_resize(150) }}" alt="{{ item.image_alt|default(item.title) }}"/></a>
+		</div>
+		{% endfor %}
+	</div>
+	<div class="row trusted-by">
+		{% for item in section.trusted %}
+		<div class="col-xl-2 col-4 award-div">
+			{% if loop.first %}
+			<h2 class="ls2 light-black">{{ 'logos.trusted'|_ }}</h2>
+			{% endif %}
+			<a target="_blank" href="{{item.url}}">
+				<img class="lazy grayscale grayscale-fade" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ item.image|media|uxda_resize(150) }}" alt="{{ item.image_alt|default(item.title) }}"/>
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+</div>

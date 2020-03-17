@@ -1,0 +1,281 @@
+.modal-open {
+  .modal {
+    overflow-y: hidden;
+  }
+}
+
+.modal-content {
+  padding: 0px;
+  border-radius: 0px;
+  border: none;
+  width: 560px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .modal-header {
+    border: none;
+  }
+  .modal-footer {
+    padding: 0px;
+    border: none;
+    padding-bottom: 40px;
+  }
+  .modal-body {
+    padding: 0px;
+    padding-bottom: 40px;
+    img {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 8px;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    h3 {
+      margin-top: 8px;
+      margin-bottom: 16px;
+    }
+    p {
+      text-align: center;
+      margin-top: 16px;
+      margin-bottom: 40px;
+      &.ux-ui-li {
+        padding: 0px;
+        margin: 0px;
+        margin-left: 16px;
+      }
+    }
+  }
+  &.portfolio {
+    width: 1136px;
+  }
+}
+
+.modal-dialog {
+  -webkit-box-shadow: 0px 10px 60px 0px rgba(0,0,0,0.3);
+-moz-box-shadow: 0px 10px 60px 0px rgba(0,0,0,0.3);
+box-shadow: 0px 10px 60px 0px rgba(0,0,0,0.3);
+&::-webkit-scrollbar {
+    display: none;
+  }
+  &.portfolio {
+    max-width: 1136px;
+    margin-top: 8%;
+    height: 80%;
+    // margin-bottom: 8%;
+    padding-bottom: 0px;
+    .modal-content {
+      min-height: 100%;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .modal-body {
+        max-height: 70vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: auto;
+        .deliverables-content {
+          max-width: 752px;
+          .cost-term {
+            p {
+              padding: 0px;
+              margin: 0px;
+              text-align: left;
+            }
+          }
+          .ux-ui {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 32px;
+            .ux-ui-col {
+              p {
+                text-align: left;
+              }
+              max-width: 272px;
+              .num-name {
+                margin-top: 16px;
+              }
+            }
+            margin-bottom: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.video-modal {
+  min-height: 65vh;
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+.video-modal-bg {
+  background: unset;
+  .modal-header{
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1136px) {
+  .modal-content {
+    width: 432px;
+    &.portfolio {
+      width: 656px;
+    }
+  }
+  .modal-dialog {
+    &.portfolio {
+      max-width: 656px;
+      margin-top: 8%;
+      padding-bottom: 0px;
+      .modal-content {
+        min-height: auto;
+        height: 100%;
+        .modal-body {
+          max-height: 100%;
+          overflow-y: auto;
+          .deliverables-content {
+            max-width: 100%;
+            padding: 56px;
+            .cost-term {
+              p {
+                padding: 0px;
+                margin: 0px;
+                text-align: left;
+              }
+            }
+            .ux-ui {
+              display: flex;
+              justify-content: space-between;
+              .ux-ui-col {
+                p {
+                  text-align: left;
+                }
+                max-width: 264px;
+                .num-name {
+                  margin-top: 16px;
+                }
+              }
+              margin-bottom: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 656px) {
+  .modal-open {
+    .modal {
+      overflow-y: auto;
+    }
+  }
+  .modal-dialog {
+    margin: 0px;
+    &.portfolio {
+      width: auto;
+    }
+  }
+  .modal-content {
+    width: 100%;
+    height: 100vh;
+    padding-left: 32px;
+    padding-right: 31px;
+    .modal-body {
+      justify-content: center;
+      align-content: center;
+      .uxda-btn {
+        justify-content: center;
+      }
+    }
+  }
+
+  .modal-dialog {
+    &.portfolio {
+      max-width: 100%;
+      margin: 0px;
+      height: 100%;
+      padding-bottom: 0px;
+      .modal-content {
+        width: 100%;
+        margin-top: 0px;
+        // height: auto;
+        .modal-body {
+          max-height: 100%;
+          overflow-y: auto;
+          .deliverables-content {
+            h2 {
+              width: 100%;
+            }
+            max-width: 100%;
+            padding: 31px;
+            .cost-term {
+              p {
+                padding: 0px;
+                margin: 0px;
+                text-align: left;
+              }
+            }
+            .ux-ui {
+              display: flex;
+              justify-content: space-between;
+              flex-direction: column;
+              .ux-ui-col {
+                margin-top: 16px;
+                p {
+                  text-align: left;
+                }
+                max-width: 264px;
+                .num-name {
+                  margin-top: 16px;
+                }
+                &:nth-child(n + 2) {
+                  margin-top: 80px;
+                }
+              }
+              margin-bottom: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-content {
+    .modal-body {
+      .popover-modal {
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none;
+        p {
+          text-align: left;
+        }
+        .uxda-popover-header {
+          align-items: flex-start;
+          div {
+            p {
+              margin-top: 2px;
+              margin-bottom: 0px;
+            }
+          }
+          p {
+            margin-top: 0px;
+          }
+          margin-bottom: 16px;
+        }
+        .pop-description {
+          text-align: left;
+          margin-bottom: 16px;
+
+        }
+        .social {
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+  } 
+}

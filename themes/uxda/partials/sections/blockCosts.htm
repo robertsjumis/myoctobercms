@@ -1,0 +1,40 @@
+[viewBag]
+==
+<div class="container rates-work-costs">
+    <h2>{{ section.title }}</h2>
+    <div class="row rates-discription-toggle">
+        <div class="col-xl-8 col-12">
+            <h3>{{ section.desc }}</h3>
+        </div>
+        <div class="col-xl-4 col-12 rates-toggle">
+            <div class="d-flex align-items-center">
+                <h2 class="pt14 switch-text switch-euro">{{ 'costs.euro'|_ }}</h2>
+                <label class="switch">
+                    <input type="checkbox" class="cost-switcher" aria-label="Cost Switcher" />
+                    <span class="slider round"></span>
+                </label>
+                <h2 class="pt14 switch-text switch-dollar gray">{{ 'costs.dollars'|_ }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+		{% for item in section.items %}
+
+		<div class="col-xl-6 col-12 cost-card">
+			<div class="row">
+				<div class="col-6 cost-card-text">
+					<h3 class="green">{{item.title}}</h3>
+					<p class="pt16 gray">{{item.desc}}</p>
+				</div>
+				<div class="col-6 d-flex justify-content-center align-items-center">
+					<p class="euro cost">{{item.euro}} {{ 'costs.euro_s'|_ }}</p>
+					<p class="dollar cost d-none">{{item.dollar}} {{ 'costs.dollars_s'|_ }}</p>
+				</div>
+			</div>
+		</div>
+
+		{% endfor %}
+
+    </div>
+</div>

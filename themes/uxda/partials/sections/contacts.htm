@@ -1,0 +1,106 @@
+[viewBag]
+==
+<div class="contact-bg-top">
+    <div class="contact-bg-1400">
+        <div></div>
+    </div>
+</div>
+<div class="contact-bg-small">
+    <div class="contact-bg-small-1400">
+        <div></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="contacts-form col-xl-7 col-md-12" role="contentinfo">
+            <h1>{{ 'contacts.contacts'|_ }}</h1>
+            <!-- <p class="p4left subtitle">{{ 'contacts.lets_bring_emotions_and_passion_to_finance_together'|_ }}</p> -->
+            <h3 class="h4">{{ 'contacts.we_are_here_to_help_you_with_your_challenge'|_ }}</h3>
+
+            <form id="simpleContactForm" action="POST" data-request="{{ simpleContact }}::onFormSubmit">
+
+                <div id="simple_contact_flash_message"></div>
+
+                <div class="input-container input-name">
+                    <img src="{{ 'assets/img/contacts/user.svg'|theme }}" alt="User" />
+                    <input placeholder="{{ 'contacts.enter_your_name'|_ }}" type="text" id="name" name="name"
+                        aria-label="{{simpleContact.properties.nameLabel}}" required />
+                    <p class="p-error"></p>
+                </div>
+
+                <div class="input-container input-email">
+                    <img src="{{ 'assets/img/contacts/mail.svg'|theme }}" alt="Mail" />
+                    <input placeholder="{{ 'contacts.enter_your_mail'|_ }}" type="email" id="email" name="email"
+                        aria-label="{{simpleContact.properties.emailLabel}}" required />
+                    <p class="p-error"></p>
+                </div>
+                <div class="input-container input-message two-line">
+                    <img src="{{ 'assets/img/contacts/comment.svg'|theme }}" alt="Comment" />
+                    <textarea class="two-line" placeholder="{{ 'contacts.message'|_ }}" id="message" name="message"
+                        aria-label="{{simpleContact.properties.messageLabel}}" required></textarea>
+                    <p class="p-error"></p>
+                </div>
+                <label class="container-cb" id="agree">{{ 'contacts.i_agree_to_the_processing_of_personal_data'|_ }}
+                    <input type="checkbox" name="agree" required aria-labelledby="agree" />
+                    <span class="checkmark"></span>
+                </label>
+                <!-- Injecting reCaptcha if enabled -->
+                {% if(simpleContact.settings.recaptcha_enabled) %}
+                <div class="input-container">
+                    <div class="g-recaptcha" data-sitekey="{{simpleContact.settings.recaptcha_site_key}}"></div>
+                </div>
+                {% endif %}
+                <!-- End reCaptcha -->
+                <button type="submit" id="simpleContactSubmitButton" class="uxda-btn"
+                    data-attach-loading>{{ 'contacts.send_request'|_ }} <span
+                        class="btn-arrow-right-green"></span></button>
+
+            </form>
+            <div class="contact-item">
+                <h2 class="pt14 gray">{{ 'contacts.chat_with_us_on'|_ }}</h2>
+                <a target="_blank" rel="noopener"
+                    href="https://wa.me/{{this.theme.contact_phone_whatsapp}}">{{ 'contacts.whatsapp'|_ }}</a>
+                <span class="green">{{ 'contacts.or_call'|_ }}</span>
+                <a target="_blank" rel="noopener"
+                    href="tel:{{this.theme.contact_phone}}">{{this.theme.contact_phone}}</a>
+            </div>
+            <div class="contact-item">
+                <h2 class="pt14 gray">{{ 'contacts.write_to_us'|_ }}</h2>
+                <a target="_blank" rel="noopener"
+                    href="mailto:{{this.theme.contact_email}}">{{this.theme.contact_email}}</a>
+            </div>
+            <div class="contact-item">
+                <h2 class="pt14 gray">{{ 'contacts.contact_us_via_skype'|_ }}</h2>
+                <a target="_blank" rel="noopener"
+                    href="skype:{{this.theme.contact_skype}}">{{this.theme.contact_skype}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="row ux-design-agency">
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+            <h2 class="pt14 gray">{{this.theme.contact_company_name_full}}</h2>
+            <p class="pt18 gray">{{this.theme.contact_address}}</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="simpleContactFormModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-end">
+                <img src="{{ 'assets/img/contacts/cross.svg'|theme }}" alt="Close" />
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="{{ 'assets/img/footer/green-heart.svg'|theme }}" alt="Heart" />
+                <h3 class="green">{{ 'contacts.thank_you'|_ }}</h3>
+                <p class="p4left text-center">
+                    {{ 'contacts.we_have_received_your_request_and_will_respond_to_you_within_24_hours'|_ }}
+                </p>
+                <button type="button" class="uxda-btn" data-dismiss="modal">{{ 'btn.close'|_ }}</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,501 @@
+html,
+* {
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h3,
+h4,
+h5 {
+  font-family: "gilroyEB", sans-serif;
+  margin: 0px;
+}
+
+h1 {
+  font-size: 80px;
+  color: black;
+  line-height: 88px;
+  letter-spacing: -1px;
+  div {
+    font-size: 80px;
+    color: black;
+    line-height: 88px;
+    letter-spacing: -1px;
+    font-family: "gilroyEB", sans-serif;
+  }
+  span {
+    font-size: 80px;
+    line-height: 88px;
+    letter-spacing: -1px;
+    font-family: "gilroyEB", sans-serif;
+  }
+  span {
+    &.pt30 {
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 48px;
+      color: black;
+    }
+    color: $green;
+  }
+}
+
+h2 {
+  font-size: 48px;
+  color: black;
+  line-height: 56px;
+  letter-spacing: -1px;
+  &.footer-green {
+    color: $green;
+    text-decoration: underline;
+  }
+  &.pt14 {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 2px;
+  }
+  span {
+    font-family: "gilroyEB", sans-serif;
+  }
+  &.span-green {
+    span {
+      color: $green;
+    }
+  }
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 40px;
+  color: black;
+  span {
+    font-family: "gilroyEB", sans-serif;
+  }
+  &.quote {
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+  }
+  &.h4 {
+    font-size: 20px;
+    line-height: 24px;
+    color: black;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 24px;
+  color: black;
+  .ls2 {
+    letter-spacing: 2px;
+  }
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 24px;
+  &.quote {
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+  }
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: $light-black;
+  margin: 0;
+  &.quote {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color: $gray;
+  }
+  &.p3grayleft {
+    font-size: 20px;
+    line-height: 32px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: $gray-6;
+  }
+  &.pt18 {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  &.pt22 {
+    font-size: 22px;
+    line-height: 36px;
+    margin-top: 24px;
+    font-weight: 300;
+  }
+  &.pt30 {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 48px;
+  }
+  &.pt14 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &.pt16 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &.p-error {
+    color: $error;
+    font-size: 12px;
+    font-family: "gilroyEB", sans-serif;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+div {
+  &.quote {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      font-style: italic;
+      color: $gray;
+    }
+  }
+  &.p3grayleft {
+    p {
+      font-size: 20px;
+      line-height: 32px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      color: $gray-6;
+    }
+  }
+  &.pt18 {
+    p {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  &.pt20 {
+    p {
+      font-size: 20px;
+      line-height: 32px;
+      margin-top: 32px;
+    }
+  }
+  &.pt22 {
+    p {
+      font-size: 22px;
+      line-height: 36px;
+      margin-top: 24px;
+      font-weight: 300;
+    }
+  }
+  &.pt30 {
+    p {
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 48px;
+    }
+  }
+  &.pt14 {
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  &.pt16 {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  &.p-error {
+    p {
+      color: $error;
+      font-size: 12px;
+      font-family: "gilroyEB", sans-serif;
+      line-height: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.p2left {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+.p4left {
+  font-size: 16px;
+  line-height: 24px;
+  color: $light-black;
+  &.bold {
+    font-weight: 700;
+  }
+}
+
+.light-gray {
+  color: $light-gray;
+}
+
+.gray {
+  color: $gray;
+}
+
+.gray-6 {
+  color: $gray-6;
+}
+
+.green {
+  color: $green;
+}
+
+.headline1 {
+  font-size: 20px;
+  line-height: 24px;
+  color: $light-black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.author {
+  font-weight: 300;
+  color: $gray;
+  line-height: 24px;
+  font-size: 14px;
+  text-decoration: underline;
+  &:hover {
+    color: $gray;
+  }
+  &.active {
+    color: $green;
+    &:hover {
+      color: $green;
+    }
+  }
+}
+span {
+  &.author {
+    text-decoration: none;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
+a {
+  color: $green;
+  text-decoration: underline;
+  &:hover {
+    color: $green;
+    text-decoration: underline;
+  }
+  &.green {
+    color: $green;
+    text-decoration: underline;
+    &:hover {
+      color: $green;
+      text-decoration: underline;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 24px;
+  li {
+    font-size: 20px;
+    line-height: 32px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: $light-black;
+    &::before {
+      content: "\2022";
+      color: $green;
+      font-weight: bold;
+      display: inline-block;
+      width: 20px;
+      margin-left: -1em;
+    }
+  }
+}
+
+ul {
+  &.process {
+    list-style: none;
+    padding-left: 24px;
+    li {
+      display: flex;
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: $gray-6;
+      &::before {
+        content: "\2022";
+        color: $green;
+        font-weight: bold;
+        display: inline-block;
+        width: 16px;
+        margin-left: -1em;
+        margin-right: 8px;
+      }
+    }
+    &.gray {
+      li {
+        &::before {
+          color: $gray-6;
+        }
+      }
+    }
+  }
+}
+
+ol {
+  &.process-ol {
+    list-style: none;
+    counter-reset: test;
+    padding-left: 24px;
+    li {
+      display: flex;
+      counter-increment: test;
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: $gray-6;
+      &::before {
+        content: counter(test) ". ";
+        color: $green;
+        margin-left: -1em;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+// HEADER NAVIGATION
+
+header {
+  nav {
+    a {
+      font-family: "gilroyEB", sans-serif;
+      line-height: 24px;
+      font-size: 16px;
+      color: $light-black;
+      text-decoration: none;
+      &:hover {
+        transition: 0.3s;
+        color: $green;
+        text-decoration: none;
+      }
+      &.active {
+        color: $green;
+      }
+    }
+  }
+}
+
+// FOOTER STYLING
+
+footer {
+  a {
+    font-size: 16px;
+    color: $gray-6;
+    line-height: 24px;
+    text-decoration: none;
+    &:hover {
+      color: $gray-6;
+      text-decoration: none;
+    }
+  }
+  .copyright {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    color: $light-black;
+  }
+}
+@media screen and (max-width: 1136px) {
+  h1 {
+    font-size: 72px;
+    letter-spacing: -0.9px;
+    line-height: 80px;
+    div {
+      font-size: 72px;
+      letter-spacing: -0.9px;
+      line-height: 80px;
+    }
+    span {
+      font-size: 72px;
+      letter-spacing: -0.9px;
+      line-height: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 656px) {
+  h1 {
+    font-size: 44px;
+    letter-spacing: -0.56px;
+    line-height: 48px;
+    div {
+      font-size: 44px;
+    letter-spacing: -0.56px;
+    line-height: 48px;
+    }
+    span {
+      font-size: 44px;
+      letter-spacing: -0.56px;
+      line-height: 48px;
+    }
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -0.72px;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0px;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0px;
+  }
+  p.pt30 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  p.pt22 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .p2left {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 300;
+  }
+
+  ul {
+    li {
+      font-size: 18px;
+      line-height: 26px;
+      &::before {
+        width: 18px;
+      }
+    }
+  }
+}

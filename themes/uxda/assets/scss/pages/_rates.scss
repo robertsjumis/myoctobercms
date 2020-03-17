@@ -1,0 +1,235 @@
+.rates-header {
+  margin-top: 180px;
+  margin-bottom: 80px;
+}
+.ways-for-coop {
+  margin-top: 80px;
+  margin-bottom: 320px;
+  .row {
+    margin-top: 96px;
+    h3 {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.rates-work-costs {
+  margin-top: 320px;
+  margin-bottom: 160px;
+  .rates-discription-toggle {
+    margin-top: 16px;
+    margin-bottom: 120px;
+    .rates-toggle {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    h3 {
+      font-size: 20px;
+      line-height: 24px;
+      color: black;
+    }
+  }
+  .cost-card {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    .cost-card-text {
+      max-width: 232px;
+      h4 {
+        margin-bottom: 16px;
+      }
+      h3 {
+        margin-bottom: 16px;
+        font-size: 20px;
+        line-height: 24px;
+        color: black;
+        &.green {
+          color: $green;
+        }
+      }
+      p {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+    }
+    p {
+      &.number,
+      &.euro,
+      &.dollar {
+        font-family: "gilroyEB", sans-serif;
+        font-size: 48px;
+        color: black;
+        line-height: 56px;
+        letter-spacing: -1px;
+        &.footer-green {
+          color: $green;
+          text-decoration: underline;
+        }
+        &.pt14 {
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 2px;
+        }
+        span {
+          font-family: "gilroyEB", sans-serif;
+        }
+        &.span-green {
+          span {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rates-fpt {
+  margin-top: 160px;
+  margin-bottom: 320px;
+  p {
+    margin-top: 16px;
+  }
+  .rates-fpt-btn {
+    display: flex;
+    margin-top: 87px;
+    justify-content: center;
+  }
+  .rates-fpt-card {
+    margin-top: 0px;
+    p {
+      max-width: 330px;
+    }
+  }
+}
+
+.rates-why-choose {
+  h4 {
+    margin-top: 16px;
+    margin-bottom: 80px;
+  }
+  margin-top: 320px;
+  margin-bottom: 320px;
+}
+
+.rates-why-choose-card {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  h3 {
+    margin-bottom: 32px;
+  }
+  p {
+    margin-top: 32px;
+  }
+}
+.quote-img-big {
+  background: url("../../assets/img/quote.png");
+  width: 64px;
+  height: 47px;
+  position: absolute;
+  left: -20px;
+  margin-top: -7px;
+}
+
+@media screen and (max-width: 1136px) {
+  .ways-for-coop {
+    margin-bottom: 240px;
+    .row {
+      margin-top: 0px;
+      div {
+        margin-top: 64px;
+        margin-bottom: 64px;
+      }
+      h3 {
+        max-width: 250px;
+      }
+    }
+  }
+  .rates-work-costs {
+    margin-top: 240px;
+    .rates-discription-toggle {
+      .rates-toggle {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 40px;
+      }
+    }
+  }
+  .rates-fpt {
+    margin-bottom: 240px;
+    .rates-fpt-card {
+      margin-top: 40px;
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+  .rates-why-choose {
+    margin-top: 240px;
+    margin-bottom: 240px;
+  }
+  .rates-work-costs {
+    .cost-card {
+      .cost-card-text {
+        max-width: 264px;
+        width: 264px;
+        p {
+          width: 264px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 656px) {
+  .ways-for-coop {
+    margin-bottom: -40px;
+    h2 {
+      margin-bottom: 80px;
+    }
+    .row {
+      h3 {
+        max-width: 100%;
+      }
+      div {
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+    }
+  }
+  .rates-work-costs {
+    margin-top: 160px;
+    .rates-discription-toggle {
+      .rates-toggle {
+        justify-content: center;
+      }
+    }
+  }
+  .rates-why-choose {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
+  .rates-fpt {
+    margin-bottom: 160px;
+    .rates-fpt-btn {
+      .uxda-btn-href {
+        span.btn-arrow-right-green {
+          margin: 0px;
+          width: 30px;
+        }
+      }
+    }
+  }
+  .rates-work-costs {
+    .cost-card {
+      .cost-card-text {
+        max-width: 100%;
+        width: 100%;
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+[viewBag]
+==
+<div class="container rates-fpt">
+    <div class="row">
+
+		{% for item in section.items %}
+
+		<div class="col-xl-4 col-12 rates-fpt-card">
+			<h3>{{item.title}}</h3>
+			<p class="p4left gray">
+				{{item.desc}}
+			</p>
+		</div>
+
+		{% endfor %}
+
+	</div>
+	{% if section.btn_title %}
+    <div class="rates-fpt-btn">
+        <a href="{{section.btn_url}}" class="uxda-btn-href">
+            {{section.btn_title}} <span class="btn-arrow-right-green"></span>
+        </a>
+    </div>
+	{% endif %}
+</div>

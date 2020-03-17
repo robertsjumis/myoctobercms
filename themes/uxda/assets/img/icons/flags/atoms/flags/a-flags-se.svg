@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="24px" viewBox="0 0 34 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>atoms/flags/a-flags-se</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="34" height="24" rx="2"></rect>
+    </defs>
+    <g id="atoms/flags/a-flags-se" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SE">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <rect id="Mask-Copy" fill="#157CBB" mask="url(#mask-2)" x="0" y="0" width="34" height="24"></rect>
+            <polygon id="Rectangle-2" fill="#FFD34D" mask="url(#mask-2)" points="0 14.4 9.71428571 14.4 9.71428571 24 14.5714286 24 14.5714286 14.4 34 14.4 34 9.6 14.5714286 9.6 14.5714286 0 9.71428571 0 9.71428571 9.6 0 9.6"></polygon>
+        </g>
+        <rect id="Rectangle" stroke="#979797" x="0.5" y="0.5" width="33" height="23"></rect>
+    </g>
+</svg>

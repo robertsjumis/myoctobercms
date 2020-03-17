@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>atoms/buttons/btn_tablet_menu</title>
+    <desc>Created with Sketch.</desc>
+    <g id="atoms/buttons/btn_tablet_menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="atoms/icons/32/a-ic-32-hamburger" transform="translate(12.000000, 12.000000)" fill="#999999">
+            <path d="M30.5,24 C31.3284271,24 32,24.6715729 32,25.5 C32,26.3284271 31.3284271,27 30.5,27 L1.5,27 C0.671572875,27 0,26.3284271 0,25.5 C0,24.6715729 0.671572875,24 1.5,24 L30.5,24 Z M30.5,15 C31.3284271,15 32,15.6715729 32,16.5 C32,17.3284271 31.3284271,18 30.5,18 L1.5,18 C0.671572875,18 0,17.3284271 0,16.5 C0,15.6715729 0.671572875,15 1.5,15 L30.5,15 Z M30.5,6 C31.3284271,6 32,6.67157288 32,7.5 C32,8.32842712 31.3284271,9 30.5,9 L1.5,9 C0.671572875,9 0,8.32842712 0,7.5 C0,6.67157288 0.671572875,6 1.5,6 L30.5,6 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

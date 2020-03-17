@@ -1,0 +1,14 @@
+==
+<!DOCTYPE html>
+<html lang="en">
+{% partial "layouts/head" %}
+<body>
+    {% partial 'layouts/body' %}
+    <div class="overflow-x-disable">
+    {% partial "layouts/header" %}
+    {% page %}
+    {% partial "layouts/footer" %}
+    </div>
+    {% partial "layouts/scripts" %}
+</body>
+</html>

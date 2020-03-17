@@ -1,0 +1,35 @@
+[viewBag]
+==
+<div class="container blue-pink-bg">
+    <div class="row desktop-display tablet-display mobile-display scrollme">
+        <div class="col-xl-6 offset-xl-1 box-content-spacing">
+            <div class="background-letter-d animateme" aria-hidden="true" data-when="enter" data-from="1" data-to="0" data-translatey="50"></div>
+            <h2 class="span-green animateme" data-when="enter" data-from="1" data-to="0" data-translatey="150">{{section.title|raw}}</h2>
+            <p class="p2left animateme" data-when="enter" data-from="1" data-to="0" data-translatey="150">{{section.description}}</p>
+            <div class="uxda-btn-href-container d-none-mobile">
+                <a href="{{ section.url }}" class="uxda-btn-href">
+					{{ 'works.read_case_study'|_ }} <span class="btn-arrow-right-green"></span>
+                </a>
+            </div>
+            <div class="img-spacing-u-tablet">
+                <img class="lazy" {{ section.image|media|uxda_responsive('lazy-placeholder') }} alt="{{section.image_alt}}"/>
+            </div>
+            <div class="uxda-btn-href-container d-none-tablet-desktop">
+                <a href="{{ section.url }}" class="uxda-btn-href">
+					{{ 'works.read_case_study'|_ }} <span class="btn-arrow-right-green"></span>
+                </a>
+            </div>
+            <div class="main-quote d-none-mobile">
+                <img class="avatar lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ section.quote_avatar|media|uxda_resize(128) }}" alt="{{section.quote_avatar_alt}}"/>
+                <div class="quote-img" aria-hidden="true"></div>
+                <div>
+                    <h3 class="quote">{{section.quote_title}}</h3>
+                    <p class="quote">{{section.quote_description}}</p>
+				</div>
+            </div>
+        </div>
+        <div class="col-xl-5 img-right-spacing">
+            <img class="lazy animateme" data-when="enter" data-from="1" data-to="0" data-translatey="100" {{ section.image|media|uxda_responsive('lazy-placeholder') }} alt="{{section.image_alt}}"/>
+        </div>
+    </div>
+</div>

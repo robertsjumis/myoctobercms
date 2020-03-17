@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="544px" height="544px" viewBox="0 0 544 544" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M178.849721,358.194184 C79.937128,358.194184 -0.247371328,278.009684 -0.247371328,179.097092 C-0.247371328,80.1844993 79.937128,0 178.849721,0 C277.762313,0 357.946812,80.1844993 357.946812,179.097092 C357.946812,221.384178 343.29124,260.248272 318.782246,290.887224 L423.681432,395.786411 C431.452739,403.557718 431.452739,416.157496 423.681432,423.928804 C415.910125,431.700111 403.310346,431.700111 395.539039,423.928804 L290.639853,319.029617 L290.639853,319.029617 C260.000901,343.538612 221.136807,358.194184 178.849721,358.194184 Z M178.842993,318 C255.610573,318 317.842993,255.76758 317.842993,179 C317.842993,102.23242 255.610573,40 178.842993,40 C102.075412,40 39.8429926,102.23242 39.8429926,179 C39.8429926,255.76758 102.075412,318 178.842993,318 Z" id="path-1"></path>
+        <filter x="-25.6%" y="-16.3%" width="151.1%" height="151.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="40" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="30" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="DESKTOP-FINAL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-blog---no-search-results" transform="translate(-94.000000, -587.000000)" fill-rule="nonzero">
+            <g id="were-sorry" transform="translate(152.000000, 605.000000)">
+                <g id="Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

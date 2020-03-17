@@ -1,0 +1,22 @@
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media screen and (max-width: 1136px) {
+  .container {
+    padding-right: 56px;
+    padding-left: 56px;
+    &.success-stories {
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 656px) {
+  .container {
+    padding-right: 31px;
+    padding-left: 32px;
+  }
+}

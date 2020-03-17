@@ -1,0 +1,50 @@
+title = "Blog article"
+url = "/blog/:slug"
+layout = "blog"
+is_hidden = 0
+enabled_in_sitemap = 1
+model_class = "RainLab\Blog\Models\Post"
+use_updated_at = 1
+changefreq = "always"
+priority = 0.1
+
+[blogeditor]
+slug = "{{ :slug }}"
+categoryPage = 404
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = 404
+==
+<?php
+function onInit()
+{
+    $this['activeMenuItem'] = 'blog';
+
+}
+function onEnd()
+{
+
+	if($this->post) {
+
+		$arcane_seo_options = $this->post->arcane_seo_options;
+
+		if(empty($arcane_seo_options['og_type'])) {
+			$arcane_seo_options['og_type'] = 'article';
+		}
+
+		if(empty($arcane_seo_options['og_image'])) {
+			$arcane_seo_options['og_image'] = $this->post->filename;
+
+		}
+
+		$this->post->arcane_seo_options = $arcane_seo_options;
+
+		$this->page->title = $this->post->title;
+
+	}
+
+}
+?>
+==
+{% partial "others/blog-article" %}

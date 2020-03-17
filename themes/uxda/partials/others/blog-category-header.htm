@@ -1,0 +1,27 @@
+[viewBag]
+==
+{% if not category %}
+<div class="container apply-header blog-category-header">
+	<h1>{{ 'blog.category_not_found'|_ }}</h1>
+</div>
+{% elseif show_results %}
+<div class="container apply-header blog-category-header">
+    <a href="{{'/blog'|app}}" class="uxda-back-href">
+        <span class="btn-arrow-left-gray"></span>
+        <span>{{ 'blog.back_to_latest_articles'|_ }}</span>
+    </a>
+    <h1 class="light-gray">{{ 'blog.h1_search'|_ }} <span class="gray">{{ 'blog.h1_result'|_ }}</span></h1>
+    {% partial "others/blog-nav" %}
+    <p class="p2left">{{category.description}}</p>
+</div>
+{% else %}
+<div class="container apply-header blog-category-header">
+    <a href="{{'/blog'|app}}" class="uxda-back-href">
+        <span class="btn-arrow-left-gray"></span>
+        <span class="pt14 gray">{{ 'blog.back_to_latest_articles'|_ }}</span>
+    </a>
+    <h1>{{ category.name }}</h1>
+    {% partial "others/blog-nav" %}
+    <p class="p2left">{{category.description}}</p>
+</div>
+{% endif %}

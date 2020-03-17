@@ -1,0 +1,31 @@
+[staticPage]
+useContent = 0
+default = 1
+
+[Sections]
+
+[simpleContact]
+nameTitle = "ENTER YOUR NAME"
+emailTitle = "ENTER YOUR MAIL"
+phoneTitle = "Phone"
+subjectTitle = "Subject"
+messageTitle = "GIVE US A SHORT INTRO ABOUT YOUR SERVICE, COMPANY AND CHALLENGE."
+buttonText = "SEND REQUEST"
+displayPhone = 0
+detailedErrors = 1
+==
+<!DOCTYPE html>
+<html lang="en">
+{% partial "layouts/head" %}
+<body>
+    {% partial 'layouts/body' %}
+    <div class="overflow-x-disable">
+    {% partial "layouts/header" %}
+    {% partial 'sections/init' %}
+    {% partial "layouts/footer" %}
+    </div>
+    {% partial "layouts/scripts" %}
+</body>
+</html>
+{variable name="collapsed" path="themes/uxda/config/collapsed" type="partial" tab="Sections" placement="primary"}{/variable}
+{variable name="sections" cssClass="collapsed" type="repeater" prompt="Add section" label="Sections" tab="Sections" placement="primary" groups="themes/uxda/config/sections.yaml"}{/variable}

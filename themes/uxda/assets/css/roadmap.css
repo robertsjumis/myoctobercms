@@ -1,0 +1,377 @@
+.road-map-discription {
+	background-color: transparent;
+	padding: 0px;
+}
+
+.anim-paused {
+	animation-play-state: paused;
+}
+
+
+.roadmap-path-line {
+	stroke-dasharray: 1509;
+	stroke-dashoffset: 1509;
+	animation: dash 1.03s ease-in-out forwards;
+}
+
+.roadmap-path-flag-point {
+	animation: scale-point 0.36s linear forwards;
+	animation-delay: 0.76s;
+	opacity: 0;
+}
+
+.roadmap-path-flag-poly {
+	transform-origin: 4.5px 0px;
+	animation: scale-poly 0.36s ease forwards;
+	animation-delay: 1.06s;
+	opacity: 0;
+}
+
+.roadmap-path-flag-text {
+	animation: flag-text-fadein 0.36s ease-out forwards 0.98s;
+	opacity: 0;
+}
+
+.roadmap-path-flag-line {
+	stroke-dasharray: 132;
+	stroke-dashoffset: 132;
+	animation: dash 0.36s ease-out forwards;
+	animation-delay: 0.76s;
+}
+
+
+
+.roadmap-dot {
+	animation: scale-point 0.36s linear forwards;
+	animation-delay: 0.09s;
+	opacity: 0;
+}
+
+.roadmap-dot-show {
+	animation: scale-point 0.36s linear forwards;
+	animation-delay: 0.36s;
+}
+
+.roadmap-dot-hide {
+	animation: hide-point 0.36s linear forwards;
+	animation-delay: 0s;
+	opacity: 1;
+}
+
+.roadmap-dot-hidden {
+	display: none;
+}
+
+
+
+.roadmap-active-point {
+	transform-origin: 28px 28px;
+	animation: scale-point 0.36s ease-out forwards;
+	animation-delay: 0.29s;
+	opacity: 0;
+}
+
+.roadmap-active-point-hide {
+	transform-origin: 28px 28px;
+	animation: hide-point 0.36s ease-out forwards;
+	animation-delay: 0s;
+	opacity: 0;
+}
+
+.roadmap-active-point-hidden {
+	display: none;
+}
+
+
+
+.roadmap-dot-line {
+	transform-origin: 0px 45px;
+	animation: scale-point-line 0.36s linear forwards;
+	animation-delay: 0.09s;
+	opacity: 0;
+	display: block;
+}
+
+.roadmap-dot-line-hide {
+	transform-origin: 0px 45px;
+	animation: hide-point 0.36s linear forwards;
+	animation-delay: 0s;
+}
+
+.roadmap-dot-line-hidden {
+	display: none;
+}
+
+
+.roadmap-dot2 {
+	animation-delay: 0.34s;
+}
+
+.roadmap-dot3 {
+	animation-delay: 0.39s;
+}
+
+.roadmap-dot4 {
+	animation-delay: 0.44s;
+}
+
+.roadmap-dot5 {
+	animation-delay: 0.49s;
+}
+
+.roadmap-dot6 {
+	animation-delay: 0.54s;
+}
+
+.roadmap-dot7 {
+	animation-delay: 0.55s;
+}
+
+
+
+
+.point-text {
+	animation: show-point-text 0.36s linear forwards;
+	animation-delay: 0.12s;
+	opacity: 0;
+	color: #666666;
+	font-weight: 300;
+}
+
+.point-text-hidden {
+	display: none;
+	color: #666666;
+	font-weight: 300;
+}
+
+.point-text-hide {
+	opacity: 1;
+	animation: hide-point-text 0.36s linear forwards;
+	animation-delay: 0s;
+	color: #666666;
+	font-weight: 300;
+}
+
+.point-text-show {
+	animation: show-point-text 0.36s linear forwards;
+	animation-delay: 0s;
+	opacity: 0;
+}
+
+
+.roadmap-desc-line {
+	transform-origin: 0px 0px;
+	animation: scale-point-line 0.36s linear forwards;
+	animation-delay: 0.09s;
+	opacity: 0;
+	display: block;
+}
+
+.roadmap-desc-line-hide {
+	transform-origin: 0px 0px;
+	animation: hide-point 0.15s linear forwards;
+	animation-delay: 0s;
+}
+
+.roadmap-desc-line-hidden {
+	display: none;
+}
+
+
+
+
+.point-desc-header-hidden {
+	display: none;
+}
+
+.point-desc-text-hidden {
+	display: none;
+}
+
+.point-desc-points-hidden {
+	display: none;
+}
+
+.point-desc-header-hide {
+	opacity: 1;
+	animation: hide-desc-text 0.18s linear forwards;
+	animation-delay: 0.06s;
+}
+
+.point-desc-text-hide {
+	opacity: 1;
+	animation: hide-desc-text 0.18s linear forwards;
+	animation-delay: 0.03s;
+}
+
+.point-desc-points-hide {
+	opacity: 1;
+	animation: hide-desc-text 0.18s linear forwards;
+	animation-delay: 0s;
+}
+
+.point-desc-header-show {
+	animation: show-desc-text 0.36s linear forwards;
+	animation-delay: 0.24s;
+	opacity: 0;
+}
+
+.point-desc-text-show {
+	animation: show-desc-text 0.36s linear forwards;
+	animation-delay: 0.27s;
+	opacity: 0;
+}
+
+.point-desc-points-show {
+	animation: show-desc-text 0.36s linear forwards;
+	animation-delay: 0.35s;
+	opacity: 0;
+}
+
+
+
+
+.point-desc-hide {
+	opacity: 1;
+	animation: hide-point-text 0.36s linear forwards;
+	animation-delay: 0s;
+}
+
+.point-desc-show {
+	animation: show-point-text 0.36s linear forwards;
+	animation-delay: 0s;
+	opacity: 0;
+}
+
+.point-text2 {
+	animation-delay: 0.17s;
+}
+
+.point-text3 {
+	animation-delay: 0.22s;
+}
+
+.point-text4 {
+	animation-delay: 0.27s;
+}
+
+.point-text5 {
+	animation-delay: 0.32s;
+}
+
+.point-text6 {
+	animation-delay: 0.37s;
+}
+
+.point-text7 {
+	animation-delay: 0.42s;
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes scale-point {
+	from   {
+		transform:scale(0);
+		opacity: 1;
+	}
+	to {
+		transform:scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes hide-point {
+	from   {
+		opacity: 1;
+		transform:scale(1);
+	}
+	to {
+		opacity: 1;
+		transform:scale(0);
+	}
+}
+
+@keyframes scale-point-line {
+	from {
+		transform:scale(0);
+		opacity: 1;
+	}
+	to {
+		transform:scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes scale-poly {
+	from   {
+		transform: translate(10px, 0px);
+		transform:scaleX(0);
+		opacity: 1;
+
+	}
+	to {
+		transform:scaleX(1);
+		opacity: 1;
+	}
+}
+
+@keyframes flag-text-fadein {
+	25%   {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform: translate(10px, 0px);
+	}
+}
+
+@keyframes show-point-text {
+	0% {
+		transform: translate(0px, 20px);
+	}
+	25%   {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes hide-point-text {
+	0% {
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(0px, 20px);
+	}
+}
+
+
+@keyframes show-desc-text {
+	0% {
+		transform: translate(0px, -20px);
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes hide-desc-text {
+	0% {
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(0px, -20px);
+	}
+}

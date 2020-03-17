@@ -1,0 +1,82 @@
+[staticMenu]
+code = "main"
+
+[viewBag]
+==
+<footer>
+    <div class="container footer">
+        <h2>{{ 'footer.we_are_eager_to_hear_about_your_challenge'|_ }}</h2>
+        <a href="{{'/contacts'|app}}">
+            <h2 class="footer-green">{{ 'footer.lets_talk'|_ }}</h2>
+        </a>
+        <div class="row contacts">
+            <div class="col-xl-5 col-md-6">
+                <div>
+                    <h3 class="pt14 light-black">{{ 'footer.email'|_ }}</h3>
+                    <a target="_blank" rel="noopener"
+                        href="mailto:{{this.theme.contact_email}}">{{this.theme.contact_email}}</a>
+                </div>
+                <div class="mrt24">
+                    <h3 class="pt14 light-black">{{ 'footer.skype'|_ }}</h3>
+                    <a target="_blank" rel="noopener"
+                        href="skype:{{this.theme.contact_skype}}">{{this.theme.contact_skype}}</a>
+                </div>
+                <div class="mrt24">
+                    <h3 class="pt14 light-black">{{ 'footer.whatsapp_and_phone_number'|_ }}</h3>
+                    <a target="_blank" rel="noopener"
+                        href="tel:{{this.theme.contact_phone}}">{{this.theme.contact_phone}}</a>
+                </div>
+                <div class="mrt24">
+                    <h3 class="pt14 light-black">{{ 'footer.calendly'|_ }}</h3>
+                    <a target="_blank" rel="noopener"
+                        href="{{this.theme.contact_calendly}}">{{ 'footer.book_a_meeting'|_ }}</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="footer-nav">
+                    <a href="https://uxdesignagency.com/">Main page</a>
+                    {% if not activeMenuItem %}
+                    {% set activeMenuItem = 'none' %}
+                    {% endif %}
+                    {% if staticMenu.menuItems %}
+                    {% for item in staticMenu.menuItems %}
+                    <a href="{{ item.url }}"
+                        {{ item.isActive or item.isChildActive or activeMenuItem == item.code ? 'class="active"' : '' }}>{{ item.title }}</a>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-xl-3 clutch">
+                {% if this.theme.show_clutch %}
+                {% partial 'layouts/widget_clutch' %}
+                {% endif %}
+            </div>
+        </div>
+        <div class="footer-cs">
+            <div class="footer-copyright">
+                <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-src="{{ 'assets/img/footer/green-heart.svg'|theme }}" alt="Heartbeat" />
+                <div class="footer-copyright-text">
+                    <h2 class="copyright">{{ 'footer.made_with_love'|_ }}</h2>
+                    <h2 class="copyright">© 2012 - {{"now"|date("Y")}} {{this.theme.contact_company_name_short}}</h2>
+                    <a href="{{'/privacy'|app}}" class='pp-link'>
+                        <h2>{{ 'footer.privacy_policy'|_ }}</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a target="_blank" rel="noopener" href="{{this.theme.link_twitter}}"><img
+                        src="{{ 'assets/img/footer/twitter.svg'|theme }}" alt="Twitter" /></a>
+                <a target="_blank" rel="noopener" href="{{this.theme.link_instagram}}"><img
+                        src="{{ 'assets/img/footer/instagram.svg'|theme }}" alt="Instagram" /></a>
+                <a target="_blank" rel="noopener" href="{{this.theme.link_linkedin}}"><img
+                        src="{{ 'assets/img/footer/linkedin.svg'|theme }}" alt="LinkedIn" /></a>
+                <a target="_blank" rel="noopener" href="{{this.theme.link_pinterest}}"><img
+                        src="{{ 'assets/img/footer/pinterest.svg'|theme }}" alt="Pinterest" /></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% partial 'layouts/video' %}
+{% partial 'layouts/popover' %}

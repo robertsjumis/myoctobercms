@@ -1,0 +1,10 @@
+[viewBag]
+==
+<div class="video container video-show-in-block lazy slideFromBottomVideo delay-900 {{section.margin}}" data-video="{{section.url}}" {% if section.image %} data-bg="url({{section.image}})" {% endif %}>
+    <div class="flex-child">
+        <div class="flex-item">
+            <a href="#"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ 'assets/img/main/play.svg'|theme }}" alt="Play" /></a>
+            <a href="#"><h2>{{ section.title }}</h2></a>
+        </div>
+	</div>
+</div>

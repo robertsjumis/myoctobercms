@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="23px" viewBox="0 0 26 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>atoms/icons/32/a-ic-32-heart</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="organisms/footer/o-footer" transform="translate(-155.000000, -429.000000)" fill="#6BC727" fill-rule="nonzero">
+            <g id="content" transform="translate(152.000000, 80.000000)">
+                <g id="made-with-love" transform="translate(0.000000, 344.000000)">
+                    <g id="atoms/icons/32/a-ic-32-heart">
+                        <path d="M16,27.156 L15.499,26.865 C14.988,26.569 3,19.531 3,12 C3,8.14 6.14,5 10,5 C12.543,5 14.774,6.363 16,8.397 C17.226,6.363 19.457,5 22,5 C25.859,5 29,8.14 29,12 C29,19.531 17.012,26.569 16.501,26.865 L16,27.156 Z M10,7 C7.243,7 5,9.243 5,12 C5,17.606 13.784,23.445 16,24.829 C18.216,23.445 27,17.606 27,12 C27,9.243 24.757,7 22,7 C19.243,7 17,9.243 17,12 L15,12 C15,9.243 12.757,7 10,7 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

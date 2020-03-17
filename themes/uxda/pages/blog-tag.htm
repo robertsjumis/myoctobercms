@@ -1,0 +1,39 @@
+title = "blog-tag"
+url = "/blog/tag/:slug"
+layout = "default"
+is_hidden = 0
+enabled_in_sitemap = 0
+use_updated_at = 0
+changefreq = "always"
+priority = 0.1
+
+[searchPosts]
+slug = "{{ :slug }}"
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+postPage = 404
+sortOrder = "published_at desc"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 1
+categoryPage = 404
+==
+<?php
+function onInit()
+{
+    $this['activeMenuItem'] = 'blog';
+}
+?>
+==
+{% set tag=searchPosts.tag %}
+{% set posts=searchPosts.posts %}
+{% partial "others/blog-tag-header" %}
+{% if not search_query %}
+<div id="showBlogResults" data-tag="{{tag.id}}">
+    {% partial 'others/blog-tag' %}
+</div>
+{% endif %}
+<div id="showSearchResults">
+    {% partial 'others/blog-search-results' %}
+</div>

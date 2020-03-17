@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="122px" height="122px" viewBox="0 0 122 122" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>atoms/buttons/a-big-button-play-white</title>
+    <desc>Created with Sketch.</desc>
+    <g id="2560" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2560_Desktop-works-v2" transform="translate(-1219.000000, -7146.000000)">
+            <g id="block-portfolio-stories-result" transform="translate(712.000000, 6952.000000)">
+                <g id="video">
+                    <g id="Group-2" transform="translate(191.637058, 194.511450)">
+                        <g id="atoms/buttons/a-big-button-play-white" transform="translate(316.362942, 0.488550)">
+                            <circle id="Oval" stroke="#FFFFFF" stroke-width="1" cx="60" cy="60" r="60"></circle>
+                            <path d="M66.8944272,45.7888544 L81.2763932,74.5527864 C81.5233825,75.0467649 81.3231581,75.6474379 80.8291796,75.8944272 C80.6903242,75.9638549 80.5372111,76 80.381966,76 L51.618034,76 C51.0657492,76 50.618034,75.5522847 50.618034,75 C50.618034,74.8447549 50.6541791,74.6916418 50.7236068,74.5527864 L65.1055728,45.7888544 C65.3525621,45.2948759 65.9532351,45.0946515 66.4472136,45.3416408 C66.640741,45.4384045 66.7976635,45.595327 66.8944272,45.7888544 Z" id="Triangle" fill="#FFFFFF" fill-rule="evenodd" transform="translate(66.000000, 60.000000) rotate(-270.000000) translate(-66.000000, -60.000000) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

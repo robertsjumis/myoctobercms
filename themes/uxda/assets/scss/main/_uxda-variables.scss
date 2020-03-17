@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "gilroyL";
+  src: url("../fonts/Gilroy-Light.otf");
+}
+
+@font-face {
+  font-family: "gilroyEB";
+  src: url("../fonts/gilroy-extrabold-webfont.woff2") format("woff2"),
+    url("../fonts/gilroy-extrabold-webfont.ttf") format("ttf"),
+    url("../fonts/gilroy-extrabold-webfont.woff") format("woff"),
+    url("../fonts/Gilroy-ExtraBold.otf") format("opentype"), 
+    url("../fonts/gilroy-extrabold-webfont.svg") format("svg");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+// Text Colors
+
+$light-gray: #e2e2e2;
+$grayFA: #fafafa;
+$gray: #999999;
+$gray-6: #666666;
+$green: #6bc727;
+$light-black: #333333;
+$error: #da1b1b;
+// Border
+
+$border-light-gray: 1px solid #f0f0f0;
+
+// Background
+
+$light-blue-bg: #f6f9ff;

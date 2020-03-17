@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>atoms/icons/24/a-ic-24-search</title>
+    <desc>Created with Sketch.</desc>
+    <g id="atoms/icons/24/a-ic-24-search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M15.6176858,17.0318994 C14.078015,18.2635271 12.1250137,19 10,19 C5.02943725,19 1,14.9705627 1,10 C1,5.02943725 5.02943725,1 10,1 C14.9705627,1 19,5.02943725 19,10 C19,12.1250137 18.2635271,14.078015 17.0318994,15.6176858 L23.0104076,21.5961941 L21.5961941,23.0104076 L15.6176858,17.0318994 L15.6176858,17.0318994 Z M10,17 C13.8659932,17 17,13.8659932 17,10 C17,6.13400675 13.8659932,3 10,3 C6.13400675,3 3,6.13400675 3,10 C3,13.8659932 6.13400675,17 10,17 Z" id="Shape" fill="#CCCCCC"></path>
+    </g>
+</svg>

@@ -1,0 +1,102 @@
+tabs:
+
+    defaultTab: Info
+    fields:
+
+
+        site_name:
+            label: 'Site Name'
+            comment: 'The website name as it should appear on the front-end'
+            default: 'UXDA'
+            tab: Info
+        site_title:
+            label: 'Default Site Title'
+            type: textarea
+            size: small
+            tab: Info
+        site_description:
+            label: 'Default Site Description'
+            type: textarea
+            size: small
+            tab: Info
+#        site_keywords:
+#            label: 'Default Site Keywords'
+#            type: textarea
+#            size: small
+#            tab: Info
+
+
+        link_twitter:
+            label: 'Twitter Social Link'
+            default: 'https://twitter.com/'
+            tab: Social Link
+        link_instagram:
+            label: 'Instagram Social Link'
+            default: 'https://www.instagram.com/'
+            tab: Social Link
+        link_linkedin:
+            label: 'LinkedIn Social Link'
+            default: 'https://www.linkedin.com/'
+            tab: Social Link
+        link_pinterest:
+            label: 'Pinterest Social Link'
+            default: 'https://www.pinterest.com/'
+            tab: Social Link
+
+
+        contact_email:
+            label: 'Email'
+            default: ''
+            tab: Contacts
+        contact_skype:
+            label: 'Skype'
+            default: ''
+            tab: Contacts
+        contact_phone:
+            label: 'Phone'
+            default: ''
+            tab: Contacts
+        contact_phone_whatsapp:
+            label: 'Phone WhatsApp'
+            default: ''
+            tab: Contacts
+        contact_calendly:
+            label: 'Calendly'
+            default: ''
+            tab: Contacts
+        contact_company_name_short:
+            label: 'Short Company Name'
+            default: ''
+            tab: Contacts
+        contact_company_name_full:
+            label: 'Full Company Name'
+            default: ''
+            tab: Contacts
+        contact_address:
+            label: 'Address'
+            default: ''
+            tab: Contacts
+
+
+        show_chat:
+            label: 'Show Chat Widget'
+            type: switch
+            default: false
+            tab: Addons
+        show_clutch:
+            label: 'Show Clutch Widget'
+            type: switch
+            default: true
+            tab: Addons
+
+
+        html_header:
+            label: 'Header Html Block (in head tag)'
+            type: textarea
+            size: large
+            tab: Scripts
+        html_footer:
+            label: 'Footer Html Block (after all script tags)'
+            type: textarea
+            size: large
+            tab: Scripts

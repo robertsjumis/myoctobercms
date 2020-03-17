@@ -1,0 +1,78 @@
+name: main
+items:
+    -
+        title: Portfolio
+        nesting: '1'
+        type: static-page
+        url: ''
+        code: ''
+        reference: portfolio2
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Process
+        nesting: '1'
+        type: static-page
+        url: ''
+        code: ''
+        reference: process2
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Team
+        nesting: '1'
+        type: static-page
+        url: ''
+        code: team
+        reference: team2
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Blog
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: blog
+        reference: Blog
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Rates
+        nesting: '1'
+        type: static-page
+        code: ''
+        reference: rates2
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Contacts
+        nesting: '1'
+        type: static-page
+        url: ''
+        code: ''
+        reference: contacts
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

@@ -1,0 +1,16 @@
+[viewBag]
+==
+{% if not tag %}
+<div class="container apply-header blog-category-header">
+	<h1>{{ 'blog.tag_not_found'|_ }}</h1>
+</div>
+{% else %}
+<div class="container apply-header blog-category-header">
+    <a href="{{'/blog'|app}}" class="uxda-back-href">
+        <span class="btn-arrow-left-gray"></span>
+        <span>{{ 'blog.back_to_latest_articles'|_ }}</span>
+    </a>
+    <h1>{{ tag.name }}</h1>
+    {% partial "others/blog-nav" %}
+</div>
+{% endif %}
